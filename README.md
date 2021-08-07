@@ -3,4 +3,4 @@ Repository for the China PTL model developed by Jinyang Zhou during IIASA YSSP-2
 
 The cn_prl has the hierarchical branch structure. The current work should be now committed to working (feature) sub-branches of the develop/prototype branch.
 
-Note:  Nothing should be directly committed to the master branch (only stable sub-branches should be merged to it).
+Note:  Nothing should be directly committed to the master branch (only stable sub-branches should be merged to it)
