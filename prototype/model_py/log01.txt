@@ -1,0 +1,141 @@
+/Users/marek/anaconda3/envs/msg_env/bin/python "/Users/marek/Library/Application Support/JetBrains/Toolbox/apps/PyCharm-C/ch-0/212.4746.96/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevconsole.py" --mode=client --port=57123
+
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['/Users/marek/Documents/GitHub/cn_ptl/prototype/model_py'])
+
+Python 3.9.4 | packaged by conda-forge | (default, May 10 2021, 22:13:15) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.24.1 -- An enhanced Interactive Python. Type '?' for help.
+PyDev console: using IPython 7.24.1
+
+Python 3.9.4 | packaged by conda-forge | (default, May 10 2021, 22:13:15) 
+[Clang 11.1.0 ] on darwin
+In[2]: runfile('/Users/marek/Documents/GitHub/cn_ptl/prototype/model_py/msg01.py', wdir='/Users/marek/Documents/GitHub/cn_ptl/prototype/model_py')
+Backend MacOSX is interactive backend. Turning interactive mode on.
+2021-08-07 15:34:12,435  INFO at.ac.iiasa.ixmp.Platform:146 - Welcome to the IX modeling platform!
+2021-08-07 15:34:12,436  INFO at.ac.iiasa.ixmp.Platform:147 -  connected to database 'jdbc:hsqldb:file:/Users/marek/.local/share/ixmp/localdb/default' (user: ixmp)...
+['node', 'commodity', 'level', 'year', 'time']
+--- Warning: The GAMS version [35.2.0] differs from the API version [24.8.3].
+--- Job MESSAGE_run.gms Start 08/07/21 15:34:14 35.2.0 r33388c4 DEX-DEG x86 64bit/Mac OS X
+--- Applying:
+    /Library/Frameworks/GAMS.framework/Versions/35/Resources/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/MESSAGE_run.gms
+    ScrDir /Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/225a/
+    SysDir /Library/Frameworks/GAMS.framework/Versions/35/Resources/
+    LogOption 4
+    --in /Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/data/MsgData_PTL_baseline_baseline_xlsx.gdx
+    --out /Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/output/MsgOutput_PTL_baseline_baseline_xlsx.gdx
+    --iter /Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/output/MsgIterationReport_PTL_baseline_baseline_xlsx.gdx
+Licensee: Small MUD - 5 User License                     S200918/0001AP-GEN
+          IIASA, Information and Communication Technologies Dep.      DC216
+          /Users/marek/Library/Application Support/GAMS/gamslice.txt
+GAMS 35.2.0   Copyright (C) 1987-2021 GAMS Development. All rights reserved
+--- Starting compilation
+--- MESSAGE_run.gms(65) 2 Mb
+--- . model_setup.gms(66) 2 Mb
+--- .. auxiliary_settings.gms(37) 2 Mb
+--- . model_setup.gms(69) 2 Mb
+--- .. version.gms(23) 2 Mb
+--- . model_setup.gms(70) 2 Mb
+--- .. version_check.gms(7) 2 Mb
+--- GDXin=/Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/data/MsgData_PTL_baseline_baseline_xlsx.gdx
+--- GDX File ($gdxIn) /Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/data/MsgData_PTL_baseline_baseline_xlsx.gdx
+--- .. version_check.gms(24) 3 Mb
+--- . model_setup.gms(73) 3 Mb
+--- .. sets_maps_def.gms(483) 3 Mb
+--- . model_setup.gms(74) 3 Mb
+--- .. parameter_def.gms(853) 3 Mb
+--- . model_setup.gms(77) 3 Mb
+--- .. data_load.gms(9) 3 Mb
+--- GDXin=/Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/data/MsgData_PTL_baseline_baseline_xlsx.gdx
+--- GDX File ($gdxIn) /Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/data/MsgData_PTL_baseline_baseline_xlsx.gdx
+--- .. data_load.gms(104) 3 Mb
+--- ... period_parameter_assignment.gms(118) 3 Mb
+--- .. data_load.gms(240) 3 Mb
+--- . model_setup.gms(80) 3 Mb
+--- .. scaling_investment_costs.gms(180) 3 Mb
+--- . model_setup.gms(86) 3 Mb
+--- .. model_core.gms(2246) 3 Mb
+--- . model_setup.gms(86) 3 Mb
+--- MESSAGE_run.gms(71) 3 Mb
+--- . model_solve.gms(104) 3 Mb
+--- .. aux_computation_time.gms(14) 3 Mb
+--- . model_solve.gms(170) 3 Mb
+--- MESSAGE_run.gms(78) 3 Mb
+--- . reporting.gms(26) 3 Mb
+--- MESSAGE_run.gms(87) 3 Mb
+--- Starting execution: elapsed 0:00:00.041
+--- MESSAGE_run.gms(1568) 4 Mb
+    +++ Importing data from '/Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/data/MsgData_PTL_baseline_baseline_xlsx.gdx'... +++
+--- MESSAGE_run.gms(1586) 4 Mb
+--- GDXin=/Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/data/MsgData_PTL_baseline_baseline_xlsx.gdx
+--- GDX File (execute_load) /Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/data/MsgData_PTL_baseline_baseline_xlsx.gdx
+--- MESSAGE_run.gms(4370) 4 Mb
+    +++ Solve the perfect-foresight version of MESSAGEix +++
+--- Generating LP model MESSAGE_LP
+--- MESSAGE_run.gms(4388) 5 Mb
+---   656 rows  576 columns  2,273 non-zeroes
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.056
+
+IBM ILOG CPLEX   35.2.0 r33388c4 Released Jun 02, 2021 DEG x86 64bit/Mac OS X 
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/cplex.opt"
+>>  advind = 0
+>>  lpmethod = 2
+>>  threads = 4
+>>  epopt = 1e-06
+Finished reading from "/Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/cplex.opt"
+
+--- Space for names approximately 0.06 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 0.64 Mb (peak 0.65 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 20.1.0.1 link memory 0.02 Mb (peak 0.12 Mb)
+--- Starting Cplex
+
+Version identifier: 20.1.0.1 | 2021-04-07 | 3a818710c
+CPXPARAM_Advance                                 0
+CPXPARAM_LPMethod                                2
+CPXPARAM_Threads                                 4
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_Simplex_Limits_Iterations               100000000
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Tried aggregator 1 time.
+LP Presolve eliminated 392 rows and 323 columns.
+Aggregator did 38 substitutions.
+Reduced LP has 225 rows, 215 columns, and 752 nonzeros.
+Presolve time = 0.00 sec. (0.78 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =           100.215086
+Iteration:     3   Dual objective     = 5754180619158.575195
+Iteration:    64   Dual objective     = 58497980427147.601562
+Iteration:   126   Dual objective     = 79093566266384.265625
+Removing shift (10).
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.01sec (det. 1.92 ticks)
+
+
+Optimal solution found
+Objective:  101608873583840.687500
+
+--- Reading solution for model MESSAGE_LP
+--- Executing after solve: elapsed 0:00:00.126
+--- MESSAGE_run.gms(4581) 5 Mb
+--- GDX File (execute_unload) /Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/output/MsgOutput_PTL_baseline_baseline_xlsx.gdx
+--- MESSAGE_run.gms(4583) 5 Mb
+    +++ End of MESSAGEix (stand-alone) run - have a nice day! +++
+*** Status: Normal completion
+--- Job MESSAGE_run.gms Stop 08/07/21 15:34:14 elapsed 0:00:00.130
+--- Warning: The GAMS version [35.2.0] differs from the API version [24.8.3].
+--- Warning: The GAMS version [35.2.0] differs from the API version [24.8.3].
+2021-08-07 15:34:14,345 ERROR at.ac.iiasa.ixmp.objects.Scenario:1691 - variable 'I' not found in gdx!
+2021-08-07 15:34:14,345 ERROR at.ac.iiasa.ixmp.objects.Scenario:1691 - variable 'C' not found in gdx!
+
