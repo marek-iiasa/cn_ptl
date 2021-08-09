@@ -1,0 +1,28 @@
+--- Job run.gms Start 08/06/21 11:09:52 31.2.0 r8ba6aed WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    D:\GAMS\31.2\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input D:\01Research\YSSP\message_mcma_example\run.gms
+    PageSize 0
+    ScrDir D:\01Research\YSSP\message_mcma_example\225a\
+    SysDir D:\GAMS\31.2\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 31.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+*** License file too old for this version of GAMS.
+*** Maintenance expired 13 days ago.
+Licensee: Medium MUD - 10 User License                   E190424:0859AO-WIN
+          East China University of Science and Technology, School ofDC14915
+          D:\GAMS\31.2\gamslice.txt
+--- Starting compilation
+***
+*** Abort "No datastructure specified for the MESSAGE model run!"
+***
+*** Error 343 in D:\01Research\YSSP\message_mcma_example\run.gms
+    Abort triggered by above statement
+--- run.gms(56) 2 Mb 1 Error
+*** Status: Compilation error(s)
+--- Job run.gms Stop 08/06/21 11:09:52 elapsed 0:00:00.042
