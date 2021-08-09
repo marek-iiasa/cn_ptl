@@ -1,0 +1,80 @@
+GAMS 31.2.0  r8ba6aed Released Jun 19, 2020 WEX-WEI x86 64bit/MS Windows - 08/06/21 11:07:47 Page 1
+Integrated Assessment Model MESSAGE
+C o m p i l a t i o n
+
+
+   2  $ONDOLLAR
+   3  $ONTEXT
+      This is the GAMS implementation of the integrated assessment and energy system model MESSAGE
+       
+      For the most recent version of this code, please visit https://github.com/iiasa/message_ix
+      For additional documentation and explanations, please visit https://github.com/iiasa/message_doc
+       
+      This project is intended to be made available under an open-source license in the future,
+      but for the time being, all rights are reserved. Please do not share or distribute without permission.
+       
+      This code version is currently maintained by:
+      Daniel Huppmann, Volker Krey
+      @ Energy Program, International Institute for Applied Systems Analysis (IIASA), Laxenburg, Austria
+      http://www.iiasa.ac.at/message/
+  16  $OFFTEXT
+  17   
+  18  * specify version number of MESSAGEix (make sure that this matches the version stated below in the documentation)
+  19  * !!! DO NOT CHANGE THESE VALUES MANUALLY !!!
+  20  * Changes have to be done by pulling the most recent version from the Github repository
+  21  $SETGLOBAL VERSION_MAJOR "1"
+  22  $SETGLOBAL VERSION_MINOR "0"
+  23   
+  24  ***
+  25  * Model run script
+  26  * ================
+  27  * | This page is generated from the auto-documentation
+  28  * | in ``model/MESSAGE_run.gms``.
+  29  *
+  30  * This is |MESSAGEix| framework version 1.0. The version number must match the version number of the ixToolbox
+  31  * used for exporting data and importing results.
+  32  *
+  33  * This file contains the workflow of a standard MESSAGE run. It can be called:
+  34  *  - either through the file ``MESSAGE_master.gms``, where the datastructure name and other options
+  35  *    are stated explicitly, or
+  36  *  - directly from the command line, with the datastructure name and other options specific as command line parameters,
+  37  *    e.g. :literal:`gams MESSAGE_run.gms --data\=\"<name>\"`.
+  38  *
+  39  * The data file (in gdx format) must be located in the ``model/data`` folder
+  40  * and be named in the format ``MSGdata_<name>.gdx``. Upon completion of the GAMS execution,
+  41  * a results file ``MSGoutput_<name><comment>.gdx`` will be written to the folder ``model/output``.
+  42  * Here, ``<comment>`` is an additional identifier provided as a command line parameter
+  43  * (e.g., for keeping gdx dumps across different runs of the same data file).
+  44  ***
+  45   
+  46  * set # as end-of-line comment; all text after # is ignored
+  47  * (for proper display in GAMS IDE, this needs to be specified in the options, too)
+  48  $OFFEOLCOM
+  49  $EOLCOM #
+  50   
+  51  *----------------------------------------------------------------------------------------------------------------------*
+  52  * sanity check of model run parameters, set defaults if not specified                                                  *
+  53  *----------------------------------------------------------------------------------------------------------------------*
+  54   
+  55  * a datastructure name is mandatory to load the gdx file - abort the run if not specified or file does not exist
+  56  $ABORT "No datastructure specified for the MESSAGE model run!"
+****       $343
+**** 343  Abort triggered by above statement
+
+**** 1 ERROR(S)   0 WARNING(S)
+
+
+COMPILATION TIME     =        0.016 SECONDS      2 MB  31.2.0 r8ba6aed WEX-WEI
+
+
+USER: Medium MUD - 10 User License                   E190424:0859AO-WIN
+      East China University of Science and Technology, School ofDC14915
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      D:\01Research\YSSP\message_mcma_example\MESSAGE_run.gms
+Output     D:\01Research\YSSP\message_mcma_example\MESSAGE_run.lst
+
+**** USER ERROR(S) ENCOUNTERED
