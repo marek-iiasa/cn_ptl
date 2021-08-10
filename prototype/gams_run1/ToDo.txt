@@ -1,0 +1,3 @@
+This version does not work on the GAMS-studio: errors in the ptl.gdx file are
+reported (including too many decimal points). This issue should be explored after
+a complete prototype will be ready.
