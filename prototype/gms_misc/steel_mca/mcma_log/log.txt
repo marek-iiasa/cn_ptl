@@ -1,0 +1,1329 @@
+********************************************************************************
+********************************************************************************
+MCMA ver. 6.26-t (compiled on Mar  9 2019 at 18:15:37)
+
+Started on t504 (sun5a) at Wed Jul 14 12:19:28 2021
+MCMA output: <A HREF="http://www.iiasa.ac.at/~marek/smt/wrk/mcma_tst/mc_logs/1882" target="_blank">link</a>
+    0  1882 Wed Jul 14 12:19:28  ?????
+iter_id = 1882
+itr_task_id: 3886
+status 0, anal_id 866, method_id 101, parent_itr 0, usr_id = 140
+prob_inst_id = 805
+Initial run for the analysis.
+1 analysis for: ID_PROB_INST = 805
+payoff table will be computed
+WARNING: for the initialization method_id 101 reset to 100
+prob_id = 922
+solv_id = 30
+itr-specific solver not defined, the problem-solver 30 will be used.
+LP dimensions: col 500, int_col 0, is_mip 0, n_row 500, nzero 0
+solver: id = 30, descr = 'Gams_z'.
+ld_prob_spc() finished -----------------------------------------------
+ld_crit() finished ------------------------------------------------
+<h3>MCMA specs</h3>
+status 0, anal_id 866, method_id 100, parent_itr 0, usr_id = 140<BR>
+Initial iteration: yes<BR>
+prob_inst_id = 805<BR>
+<h3>Criteria</h3><BR>
+Specification of 7 criteria:<BR>
+ 0:    benefit (max), var: zbenefit [1.000e+36, -1.000e+36]<BR>
+ 1:   co2_save (max), var: zco2     [1.000e+36, -1.000e+36]<BR>
+ 2:  fuel_save (max), var: zfs      [1.000e+36, -1.000e+36]<BR>
+ 3: investment (min), var: zinv     [1.000e+36, -1.000e+36]<BR>
+ 4:   nox_save (max), var: znox     [1.000e+36, -1.000e+36]<BR>
+ 5:    pm_save (max), var: zpm      [1.000e+36, -1.000e+36]<BR>
+ 6:   so2_save (max), var: zso2     [1.000e+36, -1.000e+36]<BR>
+
+Initial itr for the analysis ------------------------------------
+rerun arg NOT set in the cmd-line.
+min (1.00000e+36) and max (-1.00000e+36) values of crit    benefit stored.
+min (1.00000e+36) and max (-1.00000e+36) values of crit   co2_save stored.
+min (1.00000e+36) and max (-1.00000e+36) values of crit  fuel_save stored.
+min (1.00000e+36) and max (-1.00000e+36) values of crit investment stored.
+min (1.00000e+36) and max (-1.00000e+36) values of crit   nox_save stored.
+min (1.00000e+36) and max (-1.00000e+36) values of crit    pm_save stored.
+min (1.00000e+36) and max (-1.00000e+36) values of crit   so2_save stored.
+
+Compute utopia -------------------------------------------
+batch_id = 2275
+Task for computing utopia of benefit -----------------------------------
+Task id (from SEQ_TASK): 3887
+Task priority 3.0000003.1 (usr 3, batch 0, lpsize 1)
+mcma log linked to: /p/ime/smt_work/mcma_tst/files/00922/1882/mcma_log
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3887/' created.
+Task for computing utopia of co2_save -----------------------------------
+Task id (from SEQ_TASK): 3888
+Task priority 3.0000003.1 (usr 3, batch 0, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3888/' created.
+Task for computing utopia of fuel_save -----------------------------------
+Task id (from SEQ_TASK): 3889
+Task priority 3.0000003.1 (usr 3, batch 0, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3889/' created.
+Task for computing utopia of investment -----------------------------------
+Task id (from SEQ_TASK): 3890
+Task priority 3.0000003.1 (usr 3, batch 0, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3890/' created.
+Task for computing utopia of nox_save -----------------------------------
+Task id (from SEQ_TASK): 3891
+Task priority 3.0000003.1 (usr 3, batch 0, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3891/' created.
+Task for computing utopia of pm_save -----------------------------------
+Task id (from SEQ_TASK): 3892
+Task priority 3.0000003.1 (usr 3, batch 0, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3892/' created.
+Task for computing utopia of so2_save -----------------------------------
+Task id (from SEQ_TASK): 3893
+Task priority 3.0000003.1 (usr 3, batch 0, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3893/' created.
+7 tasks (size 1) queued at Wed Jul 14 12:19:29 2021
+
+Task manager called: /u/marek/bin/mc/task_man_t &
+Max (wall-clock) time allocated for 7 tasks of lp_size 1: 11.67 min.
+7 tasks: sleep 7'' elaps.  0.00' max 11.67' cnt 0, Wed Jul 14 12:19:29 2021
+0 tasks: sleep 0'' elaps.  0.27' max 11.67' cnt 5, Wed Jul 14 12:19:45 2021
+All optimization tasks finished a Wed Jul 14 12:19:45 2021
+crit benefit (max) value:  5.74413e+04
+max_val appr. for crit benefit (max):  5.74413e+04 (old -1.00000e+36)
+min_val appr. for crit benefit (max):  5.74413e+04 (old  1.00000e+36)
+crit benefit (max) value:  5.63056e+04
+min_val appr. for crit benefit (max):  5.63056e+04 (old  5.74413e+04)
+crit benefit (max) value:  4.86228e+04
+min_val appr. for crit benefit (max):  4.86228e+04 (old  5.63056e+04)
+crit benefit (max) value:  0.00000e+00
+min_val appr. for crit benefit (max):  0.00000e+00 (old  4.86228e+04)
+crit benefit (max) value:  5.63056e+04
+crit benefit (max) value:  5.63056e+04
+crit benefit (max) value:  5.63056e+04
+Utopia (5.74413e+04) value of    benefit stored (as MAX value).
+Utopia value of criterion benefit:  5.74413e+04
+crit co2_save (max) value:  1.00240e+05
+max_val appr. for crit co2_save (max):  1.00240e+05 (old -1.00000e+36)
+min_val appr. for crit co2_save (max):  1.00240e+05 (old  1.00000e+36)
+crit co2_save (max) value:  1.08330e+05
+max_val appr. for crit co2_save (max):  1.08330e+05 (old  1.00240e+05)
+crit co2_save (max) value:  1.03287e+05
+crit co2_save (max) value:  0.00000e+00
+min_val appr. for crit co2_save (max):  0.00000e+00 (old  1.00240e+05)
+crit co2_save (max) value:  1.08330e+05
+crit co2_save (max) value:  1.08330e+05
+crit co2_save (max) value:  1.08330e+05
+Utopia (1.08330e+05) value of   co2_save stored (as MAX value).
+Utopia value of criterion co2_save:  1.08330e+05
+crit fuel_save (max) value:  3.51951e+03
+max_val appr. for crit fuel_save (max):  3.51951e+03 (old -1.00000e+36)
+min_val appr. for crit fuel_save (max):  3.51951e+03 (old  1.00000e+36)
+crit fuel_save (max) value:  3.97083e+03
+max_val appr. for crit fuel_save (max):  3.97083e+03 (old  3.51951e+03)
+crit fuel_save (max) value:  3.97083e+03
+crit fuel_save (max) value:  0.00000e+00
+min_val appr. for crit fuel_save (max):  0.00000e+00 (old  3.51951e+03)
+crit fuel_save (max) value:  3.97083e+03
+crit fuel_save (max) value:  3.97083e+03
+crit fuel_save (max) value:  3.97083e+03
+Utopia (3.97083e+03) value of  fuel_save stored (as MAX value).
+Utopia value of criterion fuel_save:  3.97083e+03
+crit investment (min) value:  3.21541e+04
+max_val appr. for crit investment (min):  3.21541e+04 (old -1.00000e+36)
+min_val appr. for crit investment (min):  3.21541e+04 (old  1.00000e+36)
+crit investment (min) value:  3.52259e+04
+max_val appr. for crit investment (min):  3.52259e+04 (old  3.21541e+04)
+crit investment (min) value:  3.46121e+04
+crit investment (min) value:  0.00000e+00
+min_val appr. for crit investment (min):  0.00000e+00 (old  3.21541e+04)
+crit investment (min) value:  3.52259e+04
+crit investment (min) value:  3.52259e+04
+crit investment (min) value:  3.52259e+04
+Utopia (0.00000e+00) value of investment stored (as MIN value).
+Utopia value of criterion investment:  0.00000e+00
+crit nox_save (max) value:  2.02059e+03
+max_val appr. for crit nox_save (max):  2.02059e+03 (old -1.00000e+36)
+min_val appr. for crit nox_save (max):  2.02059e+03 (old  1.00000e+36)
+crit nox_save (max) value:  2.24316e+03
+max_val appr. for crit nox_save (max):  2.24316e+03 (old  2.02059e+03)
+crit nox_save (max) value:  2.20450e+03
+crit nox_save (max) value:  0.00000e+00
+min_val appr. for crit nox_save (max):  0.00000e+00 (old  2.02059e+03)
+crit nox_save (max) value:  2.24316e+03
+crit nox_save (max) value:  2.24316e+03
+crit nox_save (max) value:  2.24316e+03
+Utopia (2.24316e+03) value of   nox_save stored (as MAX value).
+Utopia value of criterion nox_save:  2.24316e+03
+crit pm_save (max) value:  1.22346e+03
+max_val appr. for crit pm_save (max):  1.22346e+03 (old -1.00000e+36)
+min_val appr. for crit pm_save (max):  1.22346e+03 (old  1.00000e+36)
+crit pm_save (max) value:  1.36261e+03
+max_val appr. for crit pm_save (max):  1.36261e+03 (old  1.22346e+03)
+crit pm_save (max) value:  1.34384e+03
+crit pm_save (max) value:  0.00000e+00
+min_val appr. for crit pm_save (max):  0.00000e+00 (old  1.22346e+03)
+crit pm_save (max) value:  1.36261e+03
+crit pm_save (max) value:  1.36261e+03
+crit pm_save (max) value:  1.36261e+03
+Utopia (1.36261e+03) value of    pm_save stored (as MAX value).
+Utopia value of criterion pm_save:  1.36261e+03
+crit so2_save (max) value:  2.15348e+03
+max_val appr. for crit so2_save (max):  2.15348e+03 (old -1.00000e+36)
+min_val appr. for crit so2_save (max):  2.15348e+03 (old  1.00000e+36)
+crit so2_save (max) value:  2.38711e+03
+max_val appr. for crit so2_save (max):  2.38711e+03 (old  2.15348e+03)
+crit so2_save (max) value:  2.34212e+03
+crit so2_save (max) value:  0.00000e+00
+min_val appr. for crit so2_save (max):  0.00000e+00 (old  2.15348e+03)
+crit so2_save (max) value:  2.38711e+03
+crit so2_save (max) value:  2.38711e+03
+crit so2_save (max) value:  2.38711e+03
+Utopia (2.38711e+03) value of   so2_save stored (as MAX value).
+Utopia value of criterion so2_save:  2.38711e+03
+<h3>Criteria</h3>
+Specification of 7 criteria (after computing utopia):<BR>
+ 0:    benefit (max), var: zbenefit [0.000e+00, 5.744e+04]<BR>
+ 1:   co2_save (max), var: zco2     [0.000e+00, 1.083e+05]<BR>
+ 2:  fuel_save (max), var: zfs      [0.000e+00, 3.971e+03]<BR>
+ 3: investment (min), var: zinv     [0.000e+00, 3.523e+04]<BR>
+ 4:   nox_save (max), var: znox     [0.000e+00, 2.243e+03]<BR>
+ 5:    pm_save (max), var: zpm      [0.000e+00, 1.363e+03]<BR>
+ 6:   so2_save (max), var: zso2     [0.000e+00, 2.387e+03]<BR>
+
+nadir1(step 0): initial Nadir appr. in two steps ---------------------------------------
+batch_id = 2276
+-------------------------------------------------------------
+nadir1(step 0): task for optimizing crit. benefit
+MC_LP::mk_nadir1_lp(0) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 0.00000e+00, range 5.74413e+04: scal 4.17242e-03 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 0.00000e+00, range 1.08330e+05: scal 3.03826e-03 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 0.00000e+00, range 3.97083e+03: scal 1.58694e-02 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 0.00000e+00, range 2.24316e+03: scal 2.11140e-02 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 0.00000e+00, range 1.36261e+03: scal 2.70903e-02 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 0.00000e+00, range 2.38711e+03: scal 2.04675e-02 (std: 1)
+Min/max scaling:  3.03826e-03,  7.29935e-02
+Crit benefit    (0, 0): GF coeff -1.10392e+03, sc 4.17242e-03
+Crit co2_save   (1, 0): GF coeff -1.14836e-02, sc 3.03826e-03
+Crit fuel_save  (2, 0): GF coeff -5.99805e-02, sc 1.58694e-02
+Crit investment (3, 0): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 0): GF coeff -7.98033e-02, sc 2.11140e-02
+Crit pm_save    (5, 0): GF coeff -1.02392e-01, sc 2.70903e-02
+Crit so2_save   (6, 0): GF coeff -7.73597e-02, sc 2.04675e-02
+-------------------------------------
+Task id (from SEQ_TASK): 3894
+Task priority 4.0000003.1 (usr 3, batch 1, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3894/' created.
+-------------------------------------------------------------
+nadir1(step 0): task for optimizing crit. co2_save
+MC_LP::mk_nadir1_lp(1) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 0.00000e+00, range 5.74413e+04: scal 4.17242e-03 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 0.00000e+00, range 1.08330e+05: scal 3.03826e-03 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 0.00000e+00, range 3.97083e+03: scal 1.58694e-02 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 0.00000e+00, range 2.24316e+03: scal 2.11140e-02 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 0.00000e+00, range 1.36261e+03: scal 2.70903e-02 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 0.00000e+00, range 2.38711e+03: scal 2.04675e-02 (std: 1)
+Min/max scaling:  3.03826e-03,  7.29935e-02
+Crit benefit    (0, 1): GF coeff -1.57703e-02, sc 4.17242e-03
+Crit co2_save   (1, 1): GF coeff -8.03849e+02, sc 3.03826e-03
+Crit fuel_save  (2, 1): GF coeff -5.99805e-02, sc 1.58694e-02
+Crit investment (3, 1): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 1): GF coeff -7.98033e-02, sc 2.11140e-02
+Crit pm_save    (5, 1): GF coeff -1.02392e-01, sc 2.70903e-02
+Crit so2_save   (6, 1): GF coeff -7.73597e-02, sc 2.04675e-02
+-------------------------------------
+Task id (from SEQ_TASK): 3895
+Task priority 4.0000003.1 (usr 3, batch 1, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3895/' created.
+-------------------------------------------------------------
+nadir1(step 0): task for optimizing crit. fuel_save
+MC_LP::mk_nadir1_lp(2) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 0.00000e+00, range 5.74413e+04: scal 4.17242e-03 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 0.00000e+00, range 1.08330e+05: scal 3.03826e-03 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 0.00000e+00, range 3.97083e+03: scal 1.58694e-02 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 0.00000e+00, range 2.24316e+03: scal 2.11140e-02 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 0.00000e+00, range 1.36261e+03: scal 2.70903e-02 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 0.00000e+00, range 2.38711e+03: scal 2.04675e-02 (std: 1)
+Min/max scaling:  3.03826e-03,  7.29935e-02
+Crit benefit    (0, 2): GF coeff -1.57703e-02, sc 4.17242e-03
+Crit co2_save   (1, 2): GF coeff -1.14836e-02, sc 3.03826e-03
+Crit fuel_save  (2, 2): GF coeff -4.19864e+03, sc 1.58694e-02
+Crit investment (3, 2): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 2): GF coeff -7.98033e-02, sc 2.11140e-02
+Crit pm_save    (5, 2): GF coeff -1.02392e-01, sc 2.70903e-02
+Crit so2_save   (6, 2): GF coeff -7.73597e-02, sc 2.04675e-02
+-------------------------------------
+Task id (from SEQ_TASK): 3896
+Task priority 4.0000003.1 (usr 3, batch 1, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3896/' created.
+-------------------------------------------------------------
+nadir1(step 0): task for optimizing crit. investment
+MC_LP::mk_nadir1_lp(3) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 0.00000e+00, range 5.74413e+04: scal 4.17242e-03 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 0.00000e+00, range 1.08330e+05: scal 3.03826e-03 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 0.00000e+00, range 3.97083e+03: scal 1.58694e-02 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 0.00000e+00, range 2.24316e+03: scal 2.11140e-02 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 0.00000e+00, range 1.36261e+03: scal 2.70903e-02 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 0.00000e+00, range 2.38711e+03: scal 2.04675e-02 (std: 1)
+Min/max scaling:  3.03826e-03,  7.29935e-02
+Crit benefit    (0, 3): GF coeff -1.57703e-02, sc 4.17242e-03
+Crit co2_save   (1, 3): GF coeff -1.14836e-02, sc 3.03826e-03
+Crit fuel_save  (2, 3): GF coeff -5.99805e-02, sc 1.58694e-02
+Crit investment (3, 3): GF coeff  1.93123e+04, sc 7.29935e-02
+Crit nox_save   (4, 3): GF coeff -7.98033e-02, sc 2.11140e-02
+Crit pm_save    (5, 3): GF coeff -1.02392e-01, sc 2.70903e-02
+Crit so2_save   (6, 3): GF coeff -7.73597e-02, sc 2.04675e-02
+-------------------------------------
+Task id (from SEQ_TASK): 3897
+Task priority 4.0000003.1 (usr 3, batch 1, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3897/' created.
+-------------------------------------------------------------
+nadir1(step 0): task for optimizing crit. nox_save
+MC_LP::mk_nadir1_lp(4) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 0.00000e+00, range 5.74413e+04: scal 4.17242e-03 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 0.00000e+00, range 1.08330e+05: scal 3.03826e-03 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 0.00000e+00, range 3.97083e+03: scal 1.58694e-02 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 0.00000e+00, range 2.24316e+03: scal 2.11140e-02 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 0.00000e+00, range 1.36261e+03: scal 2.70903e-02 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 0.00000e+00, range 2.38711e+03: scal 2.04675e-02 (std: 1)
+Min/max scaling:  3.03826e-03,  7.29935e-02
+Crit benefit    (0, 4): GF coeff -1.57703e-02, sc 4.17242e-03
+Crit co2_save   (1, 4): GF coeff -1.14836e-02, sc 3.03826e-03
+Crit fuel_save  (2, 4): GF coeff -5.99805e-02, sc 1.58694e-02
+Crit investment (3, 4): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 4): GF coeff -5.58623e+03, sc 2.11140e-02
+Crit pm_save    (5, 4): GF coeff -1.02392e-01, sc 2.70903e-02
+Crit so2_save   (6, 4): GF coeff -7.73597e-02, sc 2.04675e-02
+-------------------------------------
+Task id (from SEQ_TASK): 3898
+Task priority 4.0000003.1 (usr 3, batch 1, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3898/' created.
+-------------------------------------------------------------
+nadir1(step 0): task for optimizing crit. pm_save
+MC_LP::mk_nadir1_lp(5) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 0.00000e+00, range 5.74413e+04: scal 4.17242e-03 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 0.00000e+00, range 1.08330e+05: scal 3.03826e-03 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 0.00000e+00, range 3.97083e+03: scal 1.58694e-02 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 0.00000e+00, range 2.24316e+03: scal 2.11140e-02 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 0.00000e+00, range 1.36261e+03: scal 2.70903e-02 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 0.00000e+00, range 2.38711e+03: scal 2.04675e-02 (std: 1)
+Min/max scaling:  3.03826e-03,  7.29935e-02
+Crit benefit    (0, 5): GF coeff -1.57703e-02, sc 4.17242e-03
+Crit co2_save   (1, 5): GF coeff -1.14836e-02, sc 3.03826e-03
+Crit fuel_save  (2, 5): GF coeff -5.99805e-02, sc 1.58694e-02
+Crit investment (3, 5): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 5): GF coeff -7.98033e-02, sc 2.11140e-02
+Crit pm_save    (5, 5): GF coeff -7.16743e+03, sc 2.70903e-02
+Crit so2_save   (6, 5): GF coeff -7.73597e-02, sc 2.04675e-02
+-------------------------------------
+Task id (from SEQ_TASK): 3899
+Task priority 4.0000003.1 (usr 3, batch 1, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3899/' created.
+-------------------------------------------------------------
+nadir1(step 0): task for optimizing crit. so2_save
+MC_LP::mk_nadir1_lp(6) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 0.00000e+00, range 5.74413e+04: scal 4.17242e-03 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 0.00000e+00, range 1.08330e+05: scal 3.03826e-03 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 0.00000e+00, range 3.97083e+03: scal 1.58694e-02 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 0.00000e+00, range 2.24316e+03: scal 2.11140e-02 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 0.00000e+00, range 1.36261e+03: scal 2.70903e-02 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 0.00000e+00, range 2.38711e+03: scal 2.04675e-02 (std: 1)
+Min/max scaling:  3.03826e-03,  7.29935e-02
+Crit benefit    (0, 6): GF coeff -1.57703e-02, sc 4.17242e-03
+Crit co2_save   (1, 6): GF coeff -1.14836e-02, sc 3.03826e-03
+Crit fuel_save  (2, 6): GF coeff -5.99805e-02, sc 1.58694e-02
+Crit investment (3, 6): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 6): GF coeff -7.98033e-02, sc 2.11140e-02
+Crit pm_save    (5, 6): GF coeff -1.02392e-01, sc 2.70903e-02
+Crit so2_save   (6, 6): GF coeff -5.41518e+03, sc 2.04675e-02
+-------------------------------------
+Task id (from SEQ_TASK): 3900
+Task priority 4.0000003.1 (usr 3, batch 1, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3900/' created.
+7 tasks (size 1) queued at Wed Jul 14 12:19:45 2021
+
+Task manager called: /u/marek/bin/mc/task_man_t &
+Max (wall-clock) time allocated for 7 tasks of lp_size 1: 11.67 min.
+7 tasks: sleep 7'' elaps.  0.00' max 11.67' cnt 0, Wed Jul 14 12:19:45 2021
+0 tasks: sleep 0'' elaps.  0.23' max 11.67' cnt 4, Wed Jul 14 12:19:59 2021
+All optimization tasks finished a Wed Jul 14 12:19:59 2021
+<h3>Criteria</h3>
+Specification of 7 criteria (nadir1(0): after resetting nadir to utopia):<BR>
+ 0:    benefit (max), var: zbenefit [0.000e+00, 5.744e+04]<BR>
+ 1:   co2_save (max), var: zco2     [0.000e+00, 1.083e+05]<BR>
+ 2:  fuel_save (max), var: zfs      [0.000e+00, 3.971e+03]<BR>
+ 3: investment (min), var: zinv     [0.000e+00, 3.523e+04]<BR>
+ 4:   nox_save (max), var: znox     [0.000e+00, 2.243e+03]<BR>
+ 5:    pm_save (max), var: zpm      [0.000e+00, 1.363e+03]<BR>
+ 6:   so2_save (max), var: zso2     [0.000e+00, 2.387e+03]<BR>
+New nadir for co2_save (max):  1.00240e+05 (old  1.08330e+05)
+New nadir for fuel_save (max):  3.51951e+03 (old  3.97083e+03)
+New nadir for investment (min):  3.21541e+04 (old  0.00000e+00)
+New nadir for nox_save (max):  2.02059e+03 (old  2.24316e+03)
+New nadir for pm_save (max):  1.22346e+03 (old  1.36261e+03)
+New nadir for so2_save (max):  2.15348e+03 (old  2.38711e+03)
+New nadir for benefit (max):  5.63056e+04 (old  5.74413e+04)
+New nadir for investment (min):  3.52259e+04 (old  3.21541e+04)
+New nadir for benefit (max):  5.09633e+04 (old  5.63056e+04)
+New nadir for benefit (max):  4.06085e+02 (old  5.09633e+04)
+New nadir for co2_save (max):  9.25062e+02 (old  1.00240e+05)
+New nadir for fuel_save (max):  4.06085e+01 (old  3.51951e+03)
+New nadir for nox_save (max):  2.15388e+01 (old  2.02059e+03)
+New nadir for pm_save (max):  1.32546e+01 (old  1.22346e+03)
+New nadir for so2_save (max):  2.27814e+01 (old  2.15348e+03)
+<h3>Criteria</h3>
+Specification of 7 criteria (after nadir1(0)):<BR>
+ 0:    benefit (max), var: zbenefit [4.061e+02, 5.744e+04]<BR>
+ 1:   co2_save (max), var: zco2     [9.251e+02, 1.083e+05]<BR>
+ 2:  fuel_save (max), var: zfs      [4.061e+01, 3.971e+03]<BR>
+ 3: investment (min), var: zinv     [0.000e+00, 3.523e+04]<BR>
+ 4:   nox_save (max), var: znox     [2.154e+01, 2.243e+03]<BR>
+ 5:    pm_save (max), var: zpm      [1.325e+01, 1.363e+03]<BR>
+ 6:   so2_save (max), var: zso2     [2.278e+01, 2.387e+03]<BR>
+   benefit (max, act), N 4.061e+02, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 5.744e+04
+  co2_save (max, act), N 9.251e+02, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 1.083e+05
+ fuel_save (max, act), N 4.061e+01, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 3.971e+03
+investment (min, act), N 3.523e+04, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 0.000e+00
+  nox_save (max, act), N 2.154e+01, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 2.243e+03
+   pm_save (max, act), N 1.325e+01, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 1.363e+03
+  so2_save (max, act), N 2.278e+01, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 2.387e+03
+
+Finished nadir1(step 0) ---------------------------------------
+
+nadir1(step 1): initial Nadir appr. in two steps ---------------------------------------
+batch_id = 2277
+-------------------------------------------------------------
+nadir1(step 1): task for optimizing crit. benefit
+MC_LP::mk_nadir1_lp(0) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 4.06085e+02, range 5.70352e+04: scal 2.07052e-04 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 9.25062e+02, range 1.07405e+05: scal 9.98942e-05 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 4.06085e+01, range 3.93022e+03: scal 2.49030e-03 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 2.15388e+01, range 2.22162e+03: scal 4.54945e-03 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 1.32546e+01, range 1.34936e+03: scal 7.44099e-03 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 2.27814e+01, range 2.36433e+03: scal 4.28819e-03 (std: 1)
+Min/max scaling:  9.98942e-05,  7.29935e-02
+Crit benefit    (0, 0): GF coeff -5.47808e+01, sc 2.07052e-04
+Crit co2_save   (1, 0): GF coeff -3.77565e-04, sc 9.98942e-05
+Crit fuel_save  (2, 0): GF coeff -9.41243e-03, sc 2.49030e-03
+Crit investment (3, 0): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 0): GF coeff -1.71953e-02, sc 4.54945e-03
+Crit pm_save    (5, 0): GF coeff -2.81243e-02, sc 7.44099e-03
+Crit so2_save   (6, 0): GF coeff -1.62078e-02, sc 4.28819e-03
+-------------------------------------
+Task id (from SEQ_TASK): 3901
+Task priority 5.0000003.1 (usr 3, batch 2, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3901/' created.
+-------------------------------------------------------------
+nadir1(step 1): task for optimizing crit. co2_save
+MC_LP::mk_nadir1_lp(1) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 4.06085e+02, range 5.70352e+04: scal 2.07052e-04 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 9.25062e+02, range 1.07405e+05: scal 9.98942e-05 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 4.06085e+01, range 3.93022e+03: scal 2.49030e-03 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 2.15388e+01, range 2.22162e+03: scal 4.54945e-03 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 1.32546e+01, range 1.34936e+03: scal 7.44099e-03 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 2.27814e+01, range 2.36433e+03: scal 4.28819e-03 (std: 1)
+Min/max scaling:  9.98942e-05,  7.29935e-02
+Crit benefit    (0, 1): GF coeff -7.82583e-04, sc 2.07052e-04
+Crit co2_save   (1, 1): GF coeff -2.64295e+01, sc 9.98942e-05
+Crit fuel_save  (2, 1): GF coeff -9.41243e-03, sc 2.49030e-03
+Crit investment (3, 1): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 1): GF coeff -1.71953e-02, sc 4.54945e-03
+Crit pm_save    (5, 1): GF coeff -2.81243e-02, sc 7.44099e-03
+Crit so2_save   (6, 1): GF coeff -1.62078e-02, sc 4.28819e-03
+-------------------------------------
+Task id (from SEQ_TASK): 3902
+Task priority 5.0000003.1 (usr 3, batch 2, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3902/' created.
+-------------------------------------------------------------
+nadir1(step 1): task for optimizing crit. fuel_save
+MC_LP::mk_nadir1_lp(2) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 4.06085e+02, range 5.70352e+04: scal 2.07052e-04 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 9.25062e+02, range 1.07405e+05: scal 9.98942e-05 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 4.06085e+01, range 3.93022e+03: scal 2.49030e-03 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 2.15388e+01, range 2.22162e+03: scal 4.54945e-03 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 1.32546e+01, range 1.34936e+03: scal 7.44099e-03 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 2.27814e+01, range 2.36433e+03: scal 4.28819e-03 (std: 1)
+Min/max scaling:  9.98942e-05,  7.29935e-02
+Crit benefit    (0, 2): GF coeff -7.82583e-04, sc 2.07052e-04
+Crit co2_save   (1, 2): GF coeff -3.77565e-04, sc 9.98942e-05
+Crit fuel_save  (2, 2): GF coeff -6.58870e+02, sc 2.49030e-03
+Crit investment (3, 2): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 2): GF coeff -1.71953e-02, sc 4.54945e-03
+Crit pm_save    (5, 2): GF coeff -2.81243e-02, sc 7.44099e-03
+Crit so2_save   (6, 2): GF coeff -1.62078e-02, sc 4.28819e-03
+-------------------------------------
+Task id (from SEQ_TASK): 3903
+Task priority 5.0000003.1 (usr 3, batch 2, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3903/' created.
+-------------------------------------------------------------
+nadir1(step 1): task for optimizing crit. investment
+MC_LP::mk_nadir1_lp(3) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 4.06085e+02, range 5.70352e+04: scal 2.07052e-04 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 9.25062e+02, range 1.07405e+05: scal 9.98942e-05 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 4.06085e+01, range 3.93022e+03: scal 2.49030e-03 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 2.15388e+01, range 2.22162e+03: scal 4.54945e-03 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 1.32546e+01, range 1.34936e+03: scal 7.44099e-03 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 2.27814e+01, range 2.36433e+03: scal 4.28819e-03 (std: 1)
+Min/max scaling:  9.98942e-05,  7.29935e-02
+Crit benefit    (0, 3): GF coeff -7.82583e-04, sc 2.07052e-04
+Crit co2_save   (1, 3): GF coeff -3.77565e-04, sc 9.98942e-05
+Crit fuel_save  (2, 3): GF coeff -9.41243e-03, sc 2.49030e-03
+Crit investment (3, 3): GF coeff  1.93123e+04, sc 7.29935e-02
+Crit nox_save   (4, 3): GF coeff -1.71953e-02, sc 4.54945e-03
+Crit pm_save    (5, 3): GF coeff -2.81243e-02, sc 7.44099e-03
+Crit so2_save   (6, 3): GF coeff -1.62078e-02, sc 4.28819e-03
+-------------------------------------
+Task id (from SEQ_TASK): 3904
+Task priority 5.0000003.1 (usr 3, batch 2, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3904/' created.
+-------------------------------------------------------------
+nadir1(step 1): task for optimizing crit. nox_save
+MC_LP::mk_nadir1_lp(4) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 4.06085e+02, range 5.70352e+04: scal 2.07052e-04 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 9.25062e+02, range 1.07405e+05: scal 9.98942e-05 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 4.06085e+01, range 3.93022e+03: scal 2.49030e-03 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 2.15388e+01, range 2.22162e+03: scal 4.54945e-03 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 1.32546e+01, range 1.34936e+03: scal 7.44099e-03 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 2.27814e+01, range 2.36433e+03: scal 4.28819e-03 (std: 1)
+Min/max scaling:  9.98942e-05,  7.29935e-02
+Crit benefit    (0, 4): GF coeff -7.82583e-04, sc 2.07052e-04
+Crit co2_save   (1, 4): GF coeff -3.77565e-04, sc 9.98942e-05
+Crit fuel_save  (2, 4): GF coeff -9.41243e-03, sc 2.49030e-03
+Crit investment (3, 4): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 4): GF coeff -1.20367e+03, sc 4.54945e-03
+Crit pm_save    (5, 4): GF coeff -2.81243e-02, sc 7.44099e-03
+Crit so2_save   (6, 4): GF coeff -1.62078e-02, sc 4.28819e-03
+-------------------------------------
+Task id (from SEQ_TASK): 3905
+Task priority 5.0000003.1 (usr 3, batch 2, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3905/' created.
+-------------------------------------------------------------
+nadir1(step 1): task for optimizing crit. pm_save
+MC_LP::mk_nadir1_lp(5) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 4.06085e+02, range 5.70352e+04: scal 2.07052e-04 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 9.25062e+02, range 1.07405e+05: scal 9.98942e-05 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 4.06085e+01, range 3.93022e+03: scal 2.49030e-03 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 2.15388e+01, range 2.22162e+03: scal 4.54945e-03 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 1.32546e+01, range 1.34936e+03: scal 7.44099e-03 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 2.27814e+01, range 2.36433e+03: scal 4.28819e-03 (std: 1)
+Min/max scaling:  9.98942e-05,  7.29935e-02
+Crit benefit    (0, 5): GF coeff -7.82583e-04, sc 2.07052e-04
+Crit co2_save   (1, 5): GF coeff -3.77565e-04, sc 9.98942e-05
+Crit fuel_save  (2, 5): GF coeff -9.41243e-03, sc 2.49030e-03
+Crit investment (3, 5): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 5): GF coeff -1.71953e-02, sc 4.54945e-03
+Crit pm_save    (5, 5): GF coeff -1.96870e+03, sc 7.44099e-03
+Crit so2_save   (6, 5): GF coeff -1.62078e-02, sc 4.28819e-03
+-------------------------------------
+Task id (from SEQ_TASK): 3906
+Task priority 5.0000003.1 (usr 3, batch 2, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3906/' created.
+-------------------------------------------------------------
+nadir1(step 1): task for optimizing crit. so2_save
+MC_LP::mk_nadir1_lp(6) -------------------------------------
+Scaling coeff for linear aggregation of criteria:
+Crit. benefit    u 5.74413e+04, n 4.06085e+02, range 5.70352e+04: scal 2.07052e-04 (std: 1)
+Crit. co2_save   u 1.08330e+05, n 9.25062e+02, range 1.07405e+05: scal 9.98942e-05 (std: 1)
+Crit. fuel_save  u 3.97083e+03, n 4.06085e+01, range 3.93022e+03: scal 2.49030e-03 (std: 1)
+Crit. investment u 1.00000e+00, n 3.52259e+04, range 3.52259e+04: scal 7.29935e-02 (std: 0)
+Crit. nox_save   u 2.24316e+03, n 2.15388e+01, range 2.22162e+03: scal 4.54945e-03 (std: 1)
+Crit. pm_save    u 1.36261e+03, n 1.32546e+01, range 1.34936e+03: scal 7.44099e-03 (std: 1)
+Crit. so2_save   u 2.38711e+03, n 2.27814e+01, range 2.36433e+03: scal 4.28819e-03 (std: 1)
+Min/max scaling:  9.98942e-05,  7.29935e-02
+Crit benefit    (0, 6): GF coeff -7.82583e-04, sc 2.07052e-04
+Crit co2_save   (1, 6): GF coeff -3.77565e-04, sc 9.98942e-05
+Crit fuel_save  (2, 6): GF coeff -9.41243e-03, sc 2.49030e-03
+Crit investment (3, 6): GF coeff  2.75890e-01, sc 7.29935e-02
+Crit nox_save   (4, 6): GF coeff -1.71953e-02, sc 4.54945e-03
+Crit pm_save    (5, 6): GF coeff -2.81243e-02, sc 7.44099e-03
+Crit so2_save   (6, 6): GF coeff -1.13455e+03, sc 4.28819e-03
+-------------------------------------
+Task id (from SEQ_TASK): 3907
+Task priority 5.0000003.1 (usr 3, batch 2, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3907/' created.
+7 tasks (size 1) queued at Wed Jul 14 12:20:00 2021
+
+Task manager called: /u/marek/bin/mc/task_man_t &
+Max (wall-clock) time allocated for 7 tasks of lp_size 1: 11.67 min.
+7 tasks: sleep 7'' elaps.  0.00' max 11.67' cnt 0, Wed Jul 14 12:20:00 2021
+0 tasks: sleep 0'' elaps.  0.27' max 11.67' cnt 5, Wed Jul 14 12:20:16 2021
+All optimization tasks finished a Wed Jul 14 12:20:16 2021
+<h3>Criteria</h3>
+Specification of 7 criteria (after nadir1(1)):<BR>
+ 0:    benefit (max), var: zbenefit [4.061e+02, 5.744e+04]<BR>
+ 1:   co2_save (max), var: zco2     [9.251e+02, 1.083e+05]<BR>
+ 2:  fuel_save (max), var: zfs      [4.061e+01, 3.971e+03]<BR>
+ 3: investment (min), var: zinv     [0.000e+00, 3.523e+04]<BR>
+ 4:   nox_save (max), var: znox     [2.154e+01, 2.243e+03]<BR>
+ 5:    pm_save (max), var: zpm      [1.325e+01, 1.363e+03]<BR>
+ 6:   so2_save (max), var: zso2     [2.278e+01, 2.387e+03]<BR>
+   benefit (max, act), N 4.061e+02, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 5.744e+04
+  co2_save (max, act), N 9.251e+02, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 1.083e+05
+ fuel_save (max, act), N 4.061e+01, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 3.971e+03
+investment (min, act), N 3.523e+04, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 0.000e+00
+  nox_save (max, act), N 2.154e+01, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 2.243e+03
+   pm_save (max, act), N 1.325e+01, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 1.363e+03
+  so2_save (max, act), N 2.278e+01, R 0.000e+00 (0.000), A 0.000e+00 (0.000), U 2.387e+03
+
+Finished nadir1(step 1) ---------------------------------------
+nadir2(): Nadir approximations through regularized max-min. ------------------------------------- 
+batch_id = 2278
+nadir2() for crit. benefit ------------------------
+
+IMPROVE: file pay_lp.cc, line 258. ---------------------------------
+
+Defining CAF for crit. benefit (max, zbenefit)
+Inactive crit. benefit: asp. 1.94178e+04 moved to 1.94178e+04, res. 4.06085e+02 moved to 4.06085e+02
+Crit benefit: nadir 4.06085e+02 and res 4.06085e+02 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion benefit
+   0   2.13597e+01   0.00000e+00
+   1   1.02136e+03   1.00000e+03
+   2   2.02136e+03   1.10000e+03
+Defining CAF for crit. co2_save (max, zco2)
+Crit co2_save: utopia 1.08330e+05 and asp 1.08330e+05 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion co2_save
+   0   1.02584e+03  -1.00000e+04
+   1   2.02584e+03   0.00000e+00
+   2   3.02584e+03   1.00000e+03
+Defining CAF for crit. fuel_save (max, zfs)
+Crit fuel_save: utopia 3.97083e+03 and asp 3.97083e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion fuel_save
+   0   1.03100e+03  -1.00000e+04
+   1   2.03100e+03   0.00000e+00
+   2   3.03100e+03   1.00000e+03
+Defining CAF for crit. investment (min, zinv)
+Crit investment: utopia 0.00000e+00 and asp 0.00000e+00 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion investment
+   0   0.00000e+00   1.00000e+03
+   1   1.00000e+03   0.00000e+00
+   2   2.00000e+03  -1.00000e+04
+Defining CAF for crit. nox_save (max, znox)
+Crit nox_save: utopia 2.24316e+03 and asp 2.24316e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion nox_save
+   0   1.02909e+03  -1.00000e+04
+   1   2.02909e+03   0.00000e+00
+   2   3.02909e+03   1.00000e+03
+Defining CAF for crit. pm_save (max, zpm)
+Crit pm_save: utopia 1.36261e+03 and asp 1.36261e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion pm_save
+   0   1.02947e+03  -1.00000e+04
+   1   2.02947e+03   0.00000e+00
+   2   3.02947e+03   1.00000e+03
+Defining CAF for crit. so2_save (max, zso2)
+Crit so2_save: utopia 2.38711e+03 and asp 2.38711e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion so2_save
+   0   1.02891e+03  -1.00000e+04
+   1   2.02891e+03   0.00000e+00
+   2   3.02891e+03   1.00000e+03
+Task id (from SEQ_TASK): 3908
+Task priority 6.0000003.1 (usr 3, batch 3, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3908/' created.
+7 PWL functions converted into 14 rows and 28 elements.
+PWL functions included in LP_prob and removed from LP_DIT.
+
+nadir2() for crit. co2_save ------------------------
+
+IMPROVE: file pay_lp.cc, line 258. ---------------------------------
+
+Defining CAF for crit. benefit (max, zbenefit)
+Crit benefit: utopia 5.74413e+04 and asp 5.74413e+04 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion benefit
+   0   1.02136e+03  -1.00000e+04
+   1   2.02136e+03   0.00000e+00
+   2   3.02136e+03   1.00000e+03
+Defining CAF for crit. co2_save (max, zco2)
+Inactive crit. co2_save: asp. 3.67267e+04 moved to 3.67267e+04, res. 9.25062e+02 moved to 9.25062e+02
+Crit co2_save: nadir 9.25062e+02 and res 9.25062e+02 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion co2_save
+   0   2.58385e+01   0.00000e+00
+   1   1.02584e+03   1.00000e+03
+   2   2.02584e+03   1.10000e+03
+Defining CAF for crit. fuel_save (max, zfs)
+Crit fuel_save: utopia 3.97083e+03 and asp 3.97083e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion fuel_save
+   0   1.03100e+03  -1.00000e+04
+   1   2.03100e+03   0.00000e+00
+   2   3.03100e+03   1.00000e+03
+Defining CAF for crit. investment (min, zinv)
+Crit investment: utopia 0.00000e+00 and asp 0.00000e+00 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion investment
+   0   0.00000e+00   1.00000e+03
+   1   1.00000e+03   0.00000e+00
+   2   2.00000e+03  -1.00000e+04
+Defining CAF for crit. nox_save (max, znox)
+Crit nox_save: utopia 2.24316e+03 and asp 2.24316e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion nox_save
+   0   1.02909e+03  -1.00000e+04
+   1   2.02909e+03   0.00000e+00
+   2   3.02909e+03   1.00000e+03
+Defining CAF for crit. pm_save (max, zpm)
+Crit pm_save: utopia 1.36261e+03 and asp 1.36261e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion pm_save
+   0   1.02947e+03  -1.00000e+04
+   1   2.02947e+03   0.00000e+00
+   2   3.02947e+03   1.00000e+03
+Defining CAF for crit. so2_save (max, zso2)
+Crit so2_save: utopia 2.38711e+03 and asp 2.38711e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion so2_save
+   0   1.02891e+03  -1.00000e+04
+   1   2.02891e+03   0.00000e+00
+   2   3.02891e+03   1.00000e+03
+Task id (from SEQ_TASK): 3909
+Task priority 6.0000003.1 (usr 3, batch 3, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3909/' created.
+7 PWL functions converted into 14 rows and 28 elements.
+PWL functions included in LP_prob and removed from LP_DIT.
+
+nadir2() for crit. fuel_save ------------------------
+
+IMPROVE: file pay_lp.cc, line 258. ---------------------------------
+
+Defining CAF for crit. benefit (max, zbenefit)
+Crit benefit: utopia 5.74413e+04 and asp 5.74413e+04 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion benefit
+   0   1.02136e+03  -1.00000e+04
+   1   2.02136e+03   0.00000e+00
+   2   3.02136e+03   1.00000e+03
+Defining CAF for crit. co2_save (max, zco2)
+Crit co2_save: utopia 1.08330e+05 and asp 1.08330e+05 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion co2_save
+   0   1.02584e+03  -1.00000e+04
+   1   2.02584e+03   0.00000e+00
+   2   3.02584e+03   1.00000e+03
+Defining CAF for crit. fuel_save (max, zfs)
+Inactive crit. fuel_save: asp. 1.35068e+03 moved to 1.35068e+03, res. 4.06085e+01 moved to 4.06085e+01
+Crit fuel_save: nadir 4.06085e+01 and res 4.06085e+01 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion fuel_save
+   0   3.09971e+01   0.00000e+00
+   1   1.03100e+03   1.00000e+03
+   2   2.03100e+03   1.10000e+03
+Defining CAF for crit. investment (min, zinv)
+Crit investment: utopia 0.00000e+00 and asp 0.00000e+00 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion investment
+   0   0.00000e+00   1.00000e+03
+   1   1.00000e+03   0.00000e+00
+   2   2.00000e+03  -1.00000e+04
+Defining CAF for crit. nox_save (max, znox)
+Crit nox_save: utopia 2.24316e+03 and asp 2.24316e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion nox_save
+   0   1.02909e+03  -1.00000e+04
+   1   2.02909e+03   0.00000e+00
+   2   3.02909e+03   1.00000e+03
+Defining CAF for crit. pm_save (max, zpm)
+Crit pm_save: utopia 1.36261e+03 and asp 1.36261e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion pm_save
+   0   1.02947e+03  -1.00000e+04
+   1   2.02947e+03   0.00000e+00
+   2   3.02947e+03   1.00000e+03
+Defining CAF for crit. so2_save (max, zso2)
+Crit so2_save: utopia 2.38711e+03 and asp 2.38711e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion so2_save
+   0   1.02891e+03  -1.00000e+04
+   1   2.02891e+03   0.00000e+00
+   2   3.02891e+03   1.00000e+03
+Task id (from SEQ_TASK): 3910
+Task priority 6.0000003.1 (usr 3, batch 3, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3910/' created.
+7 PWL functions converted into 14 rows and 28 elements.
+PWL functions included in LP_prob and removed from LP_DIT.
+
+nadir2() for crit. investment ------------------------
+
+IMPROVE: file pay_lp.cc, line 258. ---------------------------------
+
+Defining CAF for crit. benefit (max, zbenefit)
+Crit benefit: utopia 5.74413e+04 and asp 5.74413e+04 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion benefit
+   0   1.02136e+03  -1.00000e+04
+   1   2.02136e+03   0.00000e+00
+   2   3.02136e+03   1.00000e+03
+Defining CAF for crit. co2_save (max, zco2)
+Crit co2_save: utopia 1.08330e+05 and asp 1.08330e+05 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion co2_save
+   0   1.02584e+03  -1.00000e+04
+   1   2.02584e+03   0.00000e+00
+   2   3.02584e+03   1.00000e+03
+Defining CAF for crit. fuel_save (max, zfs)
+Crit fuel_save: utopia 3.97083e+03 and asp 3.97083e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion fuel_save
+   0   1.03100e+03  -1.00000e+04
+   1   2.03100e+03   0.00000e+00
+   2   3.03100e+03   1.00000e+03
+Defining CAF for crit. investment (min, zinv)
+Inactive crit. investment: asp. 2.34839e+04 moved to 2.34839e+04, res. 3.52259e+04 moved to 3.52259e+04
+Crit investment: nadir 3.52259e+04 and res 3.52259e+04 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion investment
+   0   1.00000e+03   1.10000e+03
+   1   2.00000e+03   1.00000e+03
+   2   3.00000e+03   0.00000e+00
+Defining CAF for crit. nox_save (max, znox)
+Crit nox_save: utopia 2.24316e+03 and asp 2.24316e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion nox_save
+   0   1.02909e+03  -1.00000e+04
+   1   2.02909e+03   0.00000e+00
+   2   3.02909e+03   1.00000e+03
+Defining CAF for crit. pm_save (max, zpm)
+Crit pm_save: utopia 1.36261e+03 and asp 1.36261e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion pm_save
+   0   1.02947e+03  -1.00000e+04
+   1   2.02947e+03   0.00000e+00
+   2   3.02947e+03   1.00000e+03
+Defining CAF for crit. so2_save (max, zso2)
+Crit so2_save: utopia 2.38711e+03 and asp 2.38711e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion so2_save
+   0   1.02891e+03  -1.00000e+04
+   1   2.02891e+03   0.00000e+00
+   2   3.02891e+03   1.00000e+03
+Task id (from SEQ_TASK): 3911
+Task priority 6.0000003.1 (usr 3, batch 3, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3911/' created.
+7 PWL functions converted into 14 rows and 28 elements.
+PWL functions included in LP_prob and removed from LP_DIT.
+
+nadir2() for crit. nox_save ------------------------
+
+IMPROVE: file pay_lp.cc, line 258. ---------------------------------
+
+Defining CAF for crit. benefit (max, zbenefit)
+Crit benefit: utopia 5.74413e+04 and asp 5.74413e+04 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion benefit
+   0   1.02136e+03  -1.00000e+04
+   1   2.02136e+03   0.00000e+00
+   2   3.02136e+03   1.00000e+03
+Defining CAF for crit. co2_save (max, zco2)
+Crit co2_save: utopia 1.08330e+05 and asp 1.08330e+05 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion co2_save
+   0   1.02584e+03  -1.00000e+04
+   1   2.02584e+03   0.00000e+00
+   2   3.02584e+03   1.00000e+03
+Defining CAF for crit. fuel_save (max, zfs)
+Crit fuel_save: utopia 3.97083e+03 and asp 3.97083e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion fuel_save
+   0   1.03100e+03  -1.00000e+04
+   1   2.03100e+03   0.00000e+00
+   2   3.03100e+03   1.00000e+03
+Defining CAF for crit. investment (min, zinv)
+Crit investment: utopia 0.00000e+00 and asp 0.00000e+00 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion investment
+   0   0.00000e+00   1.00000e+03
+   1   1.00000e+03   0.00000e+00
+   2   2.00000e+03  -1.00000e+04
+Defining CAF for crit. nox_save (max, znox)
+Inactive crit. nox_save: asp. 7.62079e+02 moved to 7.62079e+02, res. 2.15388e+01 moved to 2.15388e+01
+Crit nox_save: nadir 2.15388e+01 and res 2.15388e+01 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion nox_save
+   0   2.90852e+01   0.00000e+00
+   1   1.02909e+03   1.00000e+03
+   2   2.02909e+03   1.10000e+03
+Defining CAF for crit. pm_save (max, zpm)
+Crit pm_save: utopia 1.36261e+03 and asp 1.36261e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion pm_save
+   0   1.02947e+03  -1.00000e+04
+   1   2.02947e+03   0.00000e+00
+   2   3.02947e+03   1.00000e+03
+Defining CAF for crit. so2_save (max, zso2)
+Crit so2_save: utopia 2.38711e+03 and asp 2.38711e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion so2_save
+   0   1.02891e+03  -1.00000e+04
+   1   2.02891e+03   0.00000e+00
+   2   3.02891e+03   1.00000e+03
+Task id (from SEQ_TASK): 3912
+Task priority 6.0000003.1 (usr 3, batch 3, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3912/' created.
+7 PWL functions converted into 14 rows and 28 elements.
+PWL functions included in LP_prob and removed from LP_DIT.
+
+nadir2() for crit. pm_save ------------------------
+
+IMPROVE: file pay_lp.cc, line 258. ---------------------------------
+
+Defining CAF for crit. benefit (max, zbenefit)
+Crit benefit: utopia 5.74413e+04 and asp 5.74413e+04 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion benefit
+   0   1.02136e+03  -1.00000e+04
+   1   2.02136e+03   0.00000e+00
+   2   3.02136e+03   1.00000e+03
+Defining CAF for crit. co2_save (max, zco2)
+Crit co2_save: utopia 1.08330e+05 and asp 1.08330e+05 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion co2_save
+   0   1.02584e+03  -1.00000e+04
+   1   2.02584e+03   0.00000e+00
+   2   3.02584e+03   1.00000e+03
+Defining CAF for crit. fuel_save (max, zfs)
+Crit fuel_save: utopia 3.97083e+03 and asp 3.97083e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion fuel_save
+   0   1.03100e+03  -1.00000e+04
+   1   2.03100e+03   0.00000e+00
+   2   3.03100e+03   1.00000e+03
+Defining CAF for crit. investment (min, zinv)
+Crit investment: utopia 0.00000e+00 and asp 0.00000e+00 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion investment
+   0   0.00000e+00   1.00000e+03
+   1   1.00000e+03   0.00000e+00
+   2   2.00000e+03  -1.00000e+04
+Defining CAF for crit. nox_save (max, znox)
+Crit nox_save: utopia 2.24316e+03 and asp 2.24316e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion nox_save
+   0   1.02909e+03  -1.00000e+04
+   1   2.02909e+03   0.00000e+00
+   2   3.02909e+03   1.00000e+03
+Defining CAF for crit. pm_save (max, zpm)
+Inactive crit. pm_save: asp. 4.63040e+02 moved to 4.63040e+02, res. 1.32546e+01 moved to 1.32546e+01
+Crit pm_save: nadir 1.32546e+01 and res 1.32546e+01 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion pm_save
+   0   2.94687e+01   0.00000e+00
+   1   1.02947e+03   1.00000e+03
+   2   2.02947e+03   1.10000e+03
+Defining CAF for crit. so2_save (max, zso2)
+Crit so2_save: utopia 2.38711e+03 and asp 2.38711e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion so2_save
+   0   1.02891e+03  -1.00000e+04
+   1   2.02891e+03   0.00000e+00
+   2   3.02891e+03   1.00000e+03
+Task id (from SEQ_TASK): 3913
+Task priority 6.0000003.1 (usr 3, batch 3, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3913/' created.
+7 PWL functions converted into 14 rows and 28 elements.
+PWL functions included in LP_prob and removed from LP_DIT.
+
+nadir2() for crit. so2_save ------------------------
+
+IMPROVE: file pay_lp.cc, line 258. ---------------------------------
+
+Defining CAF for crit. benefit (max, zbenefit)
+Crit benefit: utopia 5.74413e+04 and asp 5.74413e+04 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion benefit
+   0   1.02136e+03  -1.00000e+04
+   1   2.02136e+03   0.00000e+00
+   2   3.02136e+03   1.00000e+03
+Defining CAF for crit. co2_save (max, zco2)
+Crit co2_save: utopia 1.08330e+05 and asp 1.08330e+05 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion co2_save
+   0   1.02584e+03  -1.00000e+04
+   1   2.02584e+03   0.00000e+00
+   2   3.02584e+03   1.00000e+03
+Defining CAF for crit. fuel_save (max, zfs)
+Crit fuel_save: utopia 3.97083e+03 and asp 3.97083e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion fuel_save
+   0   1.03100e+03  -1.00000e+04
+   1   2.03100e+03   0.00000e+00
+   2   3.03100e+03   1.00000e+03
+Defining CAF for crit. investment (min, zinv)
+Crit investment: utopia 0.00000e+00 and asp 0.00000e+00 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion investment
+   0   0.00000e+00   1.00000e+03
+   1   1.00000e+03   0.00000e+00
+   2   2.00000e+03  -1.00000e+04
+Defining CAF for crit. nox_save (max, znox)
+Crit nox_save: utopia 2.24316e+03 and asp 2.24316e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion nox_save
+   0   1.02909e+03  -1.00000e+04
+   1   2.02909e+03   0.00000e+00
+   2   3.02909e+03   1.00000e+03
+Defining CAF for crit. pm_save (max, zpm)
+Crit pm_save: utopia 1.36261e+03 and asp 1.36261e+03 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion pm_save
+   0   1.02947e+03  -1.00000e+04
+   1   2.02947e+03   0.00000e+00
+   2   3.02947e+03   1.00000e+03
+Defining CAF for crit. so2_save (max, zso2)
+Inactive crit. so2_save: asp. 8.10891e+02 moved to 8.10891e+02, res. 2.27814e+01 moved to 2.27814e+01
+Crit so2_save: nadir 2.27814e+01 and res 2.27814e+01 differ less than 5%,the corresponding PWL segment not generated.
+Dump of 3 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion so2_save
+   0   2.89064e+01   0.00000e+00
+   1   1.02891e+03   1.00000e+03
+   2   2.02891e+03   1.10000e+03
+Task id (from SEQ_TASK): 3914
+Task priority 6.0000003.1 (usr 3, batch 3, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3914/' created.
+7 PWL functions converted into 14 rows and 28 elements.
+PWL functions included in LP_prob and removed from LP_DIT.
+
+7 tasks (size 1) queued at Wed Jul 14 12:20:16 2021
+
+Task manager called: /u/marek/bin/mc/task_man_t &
+Max (wall-clock) time allocated for 7 tasks of lp_size 1: 11.67 min.
+7 tasks: sleep 7'' elaps.  0.00' max 11.67' cnt 0, Wed Jul 14 12:20:16 2021
+0 tasks: sleep 0'' elaps.  0.25' max 11.67' cnt 5, Wed Jul 14 12:20:31 2021
+All optimization tasks finished a Wed Jul 14 12:20:31 2021
+Task 3908, crit. benefit, val  4.20608e+04
+Task 3908, crit. co2_save, val  6.76518e+04
+Task 3908, crit. fuel_save, val  2.48232e+03
+Task 3908, crit. investment, val  1.33413e+04
+Task 3908, crit. nox_save, val  1.40176e+03
+Task 3908, crit. pm_save, val  8.51563e+02
+Task 3908, crit. so2_save, val  1.49166e+03
+
+IMPROVE: file pay_lp.cc, line 344. ---------------------------------
+
+New nadir for benefit (max):  4.20608e+04 (old  5.74413e+04)
+Nadir (4.20608e+04) value of    benefit stored (as MIN value).
+New nadir for co2_save (max):  6.76518e+04 (old  1.08330e+05)
+Nadir (6.76518e+04) value of   co2_save stored (as MIN value).
+New nadir for fuel_save (max):  2.48232e+03 (old  3.97083e+03)
+Nadir (2.48232e+03) value of  fuel_save stored (as MIN value).
+New nadir for investment (min):  1.33413e+04 (old  0.00000e+00)
+Nadir (1.33413e+04) value of investment stored (as MAX value).
+New nadir for nox_save (max):  1.40176e+03 (old  2.24316e+03)
+Nadir (1.40176e+03) value of   nox_save stored (as MIN value).
+New nadir for pm_save (max):  8.51563e+02 (old  1.36261e+03)
+Nadir (8.51563e+02) value of    pm_save stored (as MIN value).
+New nadir for so2_save (max):  1.49166e+03 (old  2.38711e+03)
+Nadir (1.49166e+03) value of   so2_save stored (as MIN value).
+Task 3909, crit. benefit, val  3.90095e+04
+Task 3909, crit. co2_save, val  6.66700e+04
+Task 3909, crit. fuel_save, val  2.51043e+03
+Task 3909, crit. investment, val  1.33219e+04
+Task 3909, crit. nox_save, val  1.40423e+03
+Task 3909, crit. pm_save, val  8.54699e+02
+Task 3909, crit. so2_save, val  1.49295e+03
+New nadir for benefit (max):  3.90095e+04 (old  4.20608e+04)
+Nadir (3.90095e+04) value of    benefit stored (as MIN value).
+New nadir for co2_save (max):  6.66700e+04 (old  6.76518e+04)
+Nadir (6.66700e+04) value of   co2_save stored (as MIN value).
+Task 3910, crit. benefit, val  4.20608e+04
+Task 3910, crit. co2_save, val  6.76518e+04
+Task 3910, crit. fuel_save, val  2.48232e+03
+Task 3910, crit. investment, val  1.33413e+04
+Task 3910, crit. nox_save, val  1.40176e+03
+Task 3910, crit. pm_save, val  8.51563e+02
+Task 3910, crit. so2_save, val  1.49166e+03
+Task 3911, crit. benefit, val  5.65049e+04
+Task 3911, crit. co2_save, val  1.07364e+05
+Task 3911, crit. fuel_save, val  3.90629e+03
+Task 3911, crit. investment, val  3.49566e+04
+Task 3911, crit. nox_save, val  2.21280e+03
+Task 3911, crit. pm_save, val  1.34342e+03
+Task 3911, crit. so2_save, val  2.35541e+03
+New nadir for investment (min):  3.49566e+04 (old  1.33413e+04)
+Nadir (3.49566e+04) value of investment stored (as MAX value).
+Task 3912, crit. benefit, val  4.20614e+04
+Task 3912, crit. co2_save, val  6.76519e+04
+Task 3912, crit. fuel_save, val  2.48231e+03
+Task 3912, crit. investment, val  1.33413e+04
+Task 3912, crit. nox_save, val  1.40175e+03
+Task 3912, crit. pm_save, val  8.51561e+02
+Task 3912, crit. so2_save, val  1.49166e+03
+New nadir for fuel_save (max):  2.48231e+03 (old  2.48232e+03)
+Nadir (2.48231e+03) value of  fuel_save stored (as MIN value).
+New nadir for nox_save (max):  1.40175e+03 (old  1.40176e+03)
+Nadir (1.40175e+03) value of   nox_save stored (as MIN value).
+New nadir for pm_save (max):  8.51561e+02 (old  8.51563e+02)
+Nadir (8.51561e+02) value of    pm_save stored (as MIN value).
+Task 3913, crit. benefit, val  4.20608e+04
+Task 3913, crit. co2_save, val  6.76518e+04
+Task 3913, crit. fuel_save, val  2.48232e+03
+Task 3913, crit. investment, val  1.33413e+04
+Task 3913, crit. nox_save, val  1.40176e+03
+Task 3913, crit. pm_save, val  8.51563e+02
+Task 3913, crit. so2_save, val  1.49166e+03
+Task 3914, crit. benefit, val  4.20608e+04
+Task 3914, crit. co2_save, val  6.76518e+04
+Task 3914, crit. fuel_save, val  2.48232e+03
+Task 3914, crit. investment, val  1.33413e+04
+Task 3914, crit. nox_save, val  1.40176e+03
+Task 3914, crit. pm_save, val  8.51563e+02
+Task 3914, crit. so2_save, val  1.49166e+03
+<h3>Criteria</h3>
+Specification of 7 criteria (after nadir2().):<BR>
+ 0:    benefit (max), var: zbenefit [3.901e+04, 5.744e+04]<BR>
+ 1:   co2_save (max), var: zco2     [6.667e+04, 1.083e+05]<BR>
+ 2:  fuel_save (max), var: zfs      [2.482e+03, 3.971e+03]<BR>
+ 3: investment (min), var: zinv     [0.000e+00, 3.496e+04]<BR>
+ 4:   nox_save (max), var: znox     [1.402e+03, 2.243e+03]<BR>
+ 5:    pm_save (max), var: zpm      [8.516e+02, 1.363e+03]<BR>
+ 6:   so2_save (max), var: zso2     [1.492e+03, 2.387e+03]<BR>
+   benefit (max, act), N 3.901e+04, R 3.843e+04 (0.000), A 5.744e+04 (0.000), U 5.744e+04
+  co2_save (max, act), N 6.667e+04, R 7.253e+04 (0.000), A 1.083e+05 (0.000), U 1.083e+05
+ fuel_save (max, act), N 2.482e+03, R 2.661e+03 (0.000), A 3.971e+03 (0.000), U 3.971e+03
+investment (min, act), N 3.496e+04, R 1.174e+04 (0.000), A 0.000e+00 (0.000), U 0.000e+00
+  nox_save (max, act), N 1.402e+03, R 1.503e+03 (0.000), A 2.243e+03 (0.000), U 2.243e+03
+   pm_save (max, act), N 8.516e+02, R 9.128e+02 (0.000), A 1.363e+03 (0.000), U 1.363e+03
+  so2_save (max, inact), N 1.492e+03, R 2.278e+01 (0.000), A 8.109e+02 (0.000), U 2.387e+03
+===================== payoff table computed
+MCMA::define_cr_mask() ----------------------------------------------
+crit benefit, mag = 3, range 1.84318e+04
+crit co2_save, mag = 3, range 4.16600e+04
+crit fuel_save, mag = 3, range 1.48852e+03
+crit investment, mag = 3, range 3.49566e+04
+crit nox_save, mag = 0, range 8.41410e+02
+crit pm_save, mag = 0, range 5.11049e+02
+crit so2_save, mag = 0, range 8.95450e+02
+MCMA::store_cr_mask() ----------------------------------------------
+low_mask (##.##), upp_mask (##.##), magn (  3) of crit '   benefit' stored.
+low_mask (##.##), upp_mask (###.#), magn (  3) of crit '  co2_save' stored.
+low_mask (#.###), upp_mask (#.###), magn (  3) of crit ' fuel_save' stored.
+low_mask (##.##), upp_mask (#.###), magn (  3) of crit 'investment' stored.
+low_mask (###.#), upp_mask (###.#), magn (  0) of crit '  nox_save' stored.
+low_mask (###.#), upp_mask (###.#), magn (  0) of crit '   pm_save' stored.
+low_mask (###.#), upp_mask (###.#), magn (  0) of crit '  so2_save' stored.
+WARNING: removing 196 old records from ITR_ENT_VL for cond 'ID_ITR = 1882 and ID_ENT in (41, 42)'
+
+==============================================================
+Neutral solution ---------------------------------------------------
+<h3>Criteria</h3>
+Specification of 7 criteria (after setting asp/res eq-dist. between utopia/nadir):<BR>
+ 0:    benefit (max), var: zbenefit [3.901e+04, 5.744e+04]<BR>
+ 1:   co2_save (max), var: zco2     [6.667e+04, 1.083e+05]<BR>
+ 2:  fuel_save (max), var: zfs      [2.482e+03, 3.971e+03]<BR>
+ 3: investment (min), var: zinv     [0.000e+00, 3.496e+04]<BR>
+ 4:   nox_save (max), var: znox     [1.402e+03, 2.243e+03]<BR>
+ 5:    pm_save (max), var: zpm      [8.516e+02, 1.363e+03]<BR>
+ 6:   so2_save (max), var: zso2     [1.492e+03, 2.387e+03]<BR>
+   benefit (max, act), N 3.901e+04, R 4.515e+04 (0.333), A 5.130e+04 (0.667), U 5.744e+04
+  co2_save (max, act), N 6.667e+04, R 8.056e+04 (0.333), A 9.444e+04 (0.667), U 1.083e+05
+ fuel_save (max, act), N 2.482e+03, R 2.978e+03 (0.333), A 3.475e+03 (0.667), U 3.971e+03
+investment (min, act), N 3.496e+04, R 2.330e+04 (0.333), A 1.165e+04 (0.667), U 0.000e+00
+  nox_save (max, act), N 1.402e+03, R 1.682e+03 (0.333), A 1.963e+03 (0.667), U 2.243e+03
+   pm_save (max, act), N 8.516e+02, R 1.022e+03 (0.333), A 1.192e+03 (0.667), U 1.363e+03
+  so2_save (max, act), N 1.492e+03, R 1.790e+03 (0.333), A 2.089e+03 (0.667), U 2.387e+03
+Generating MC_LP for Pareto solution using asp/res ------------------ 
+Defining CAF for crit. benefit (max, zbenefit)
+Dump of 4 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion benefit
+   0   6.34927e+03  -1.00000e+04
+   1   7.34927e+03   0.00000e+00
+   2   8.34927e+03   1.00000e+03
+   3   9.34927e+03   1.10000e+03
+Defining CAF for crit. co2_save (max, zco2)
+Dump of 4 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion co2_save
+   0   4.80101e+03  -1.00000e+04
+   1   5.80101e+03   0.00000e+00
+   2   6.80101e+03   1.00000e+03
+   3   7.80101e+03   1.10000e+03
+Defining CAF for crit. fuel_save (max, zfs)
+Dump of 4 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion fuel_save
+   0   5.00291e+03  -1.00000e+04
+   1   6.00291e+03   0.00000e+00
+   2   7.00291e+03   1.00000e+03
+   3   8.00291e+03   1.10000e+03
+Defining CAF for crit. investment (min, zinv)
+Dump of 4 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion investment
+   0  -2.27374e-13   1.10000e+03
+   1   1.00000e+03   1.00000e+03
+   2   2.00000e+03   0.00000e+00
+   3   3.00000e+03  -1.00000e+04
+Defining CAF for crit. nox_save (max, znox)
+Dump of 4 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion nox_save
+   0   4.99786e+03  -1.00000e+04
+   1   5.99786e+03   0.00000e+00
+   2   6.99786e+03   1.00000e+03
+   3   7.99786e+03   1.10000e+03
+Defining CAF for crit. pm_save (max, zpm)
+Dump of 4 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion pm_save
+   0   4.99890e+03  -1.00000e+04
+   1   5.99890e+03   0.00000e+00
+   2   6.99890e+03   1.00000e+03
+   3   7.99890e+03   1.10000e+03
+Defining CAF for crit. so2_save (max, zso2)
+Dump of 4 mPwlPts: MC_LP::caf_adhoc(): points defining CAF for criterion so2_save
+   0   4.99746e+03  -1.00000e+04
+   1   5.99746e+03   0.00000e+00
+   2   6.99746e+03   1.00000e+03
+   3   7.99746e+03   1.10000e+03
+batch_id = 2279
+Task id (from GUI): 3886
+Task priority 7.0000003.1 (usr 3, batch 4, lpsize 1)
+Task wdir '/p/ime/smt_work/mcma_tst/files/00922/1882/3886/' created.
+7 PWL functions converted into 21 rows and 42 elements.
+PWL functions included in LP_prob and removed from LP_DIT.
+
+one task (size 1) queued at Wed Jul 14 12:20:32 2021
+cond for queue() task generated by GUI: ID_TASK = 3886
+task_id 3886
+
+Task manager called: /u/marek/bin/mc/task_man_t &
+Max (wall-clock) time allocated for 1 tasks of lp_size 1:  1.67 min.
+1 tasks: sleep 1'' elaps.  0.00' max  1.67' cnt 0, Wed Jul 14 12:20:32 2021
+0 tasks: sleep 0'' elaps.  0.03' max  1.67' cnt 2, Wed Jul 14 12:20:34 2021
+All optimization tasks finished a Wed Jul 14 12:20:34 2021
+Task 3886, crit. benefit, val  4.74432e+04
+Task 3886, crit. co2_save, val  8.46560e+04
+Task 3886, crit. fuel_save, val  3.10451e+03
+Task 3886, crit. investment, val  2.03446e+04
+Task 3886, crit. nox_save, val  1.75347e+03
+Task 3886, crit. pm_save, val  1.06518e+03
+Task 3886, crit. so2_save, val  1.86596e+03
+crit benefit(max): pos 2, old_nad 3.90095e+04, uploaded 5.74413e+04, updated 0
+crit co2_save(max): pos 2, old_nad 6.66700e+04, uploaded 1.08330e+05, updated 0
+crit fuel_save(max): pos 2, old_nad 2.48231e+03, uploaded 3.97083e+03, updated 0
+crit investment(min): pos 1, old_nad 3.49566e+04, uploaded 0.00000e+00, updated 0
+crit nox_save(max): pos 2, old_nad 1.40175e+03, uploaded 2.24316e+03, updated 0
+crit pm_save(max): pos 2, old_nad 8.51561e+02, uploaded 1.36261e+03, updated 0
+crit so2_save(max): pos 2, old_nad 1.49166e+03, uploaded 2.38711e+03, updated 0
+================================================================
+<h3>Criteria</h3>
+Specification of 7 criteria (from main_mcma()):<BR>
+ 0:    benefit (max), var: zbenefit [3.901e+04, 5.744e+04]<BR>
+ 1:   co2_save (max), var: zco2     [6.667e+04, 1.083e+05]<BR>
+ 2:  fuel_save (max), var: zfs      [2.482e+03, 3.971e+03]<BR>
+ 3: investment (min), var: zinv     [0.000e+00, 3.496e+04]<BR>
+ 4:   nox_save (max), var: znox     [1.402e+03, 2.243e+03]<BR>
+ 5:    pm_save (max), var: zpm      [8.516e+02, 1.363e+03]<BR>
+ 6:   so2_save (max), var: zso2     [1.492e+03, 2.387e+03]<BR>
+   benefit (max, act), N 3.901e+04, R 4.515e+04 (0.333), A 5.130e+04 (0.667), U 5.744e+04
+  co2_save (max, act), N 6.667e+04, R 8.056e+04 (0.333), A 9.444e+04 (0.667), U 1.083e+05
+ fuel_save (max, act), N 2.482e+03, R 2.978e+03 (0.333), A 3.475e+03 (0.667), U 3.971e+03
+investment (min, act), N 3.496e+04, R 2.330e+04 (0.333), A 1.165e+04 (0.667), U 0.000e+00
+  nox_save (max, act), N 1.402e+03, R 1.682e+03 (0.333), A 1.963e+03 (0.667), U 2.243e+03
+   pm_save (max, act), N 8.516e+02, R 1.022e+03 (0.333), A 1.192e+03 (0.667), U 1.363e+03
+  so2_save (max, act), N 1.492e+03, R 1.790e+03 (0.333), A 2.089e+03 (0.667), U 2.387e+03
+Storing preferences -----------------------------------------------
+storing asp. (normalized)[benefit (1315)] = 0.666667
+storing asp. (normalized)[co2_save (1316)] = 0.666667
+storing asp. (normalized)[fuel_save (1317)] = 0.666667
+storing asp. (normalized)[investment (1318)] = 0.666667
+storing asp. (normalized)[nox_save (1319)] = 0.666667
+storing asp. (normalized)[pm_save (1320)] = 0.666667
+storing asp. (normalized)[so2_save (1321)] = 0.666667
+Stored (itr_id 1882) 7 criteria attr 'asp. (normalized)' (id 17) in PREF_VL
+storing res. (normalized)[benefit (1315)] = 0.333333
+storing res. (normalized)[co2_save (1316)] = 0.333333
+storing res. (normalized)[fuel_save (1317)] = 0.333333
+storing res. (normalized)[investment (1318)] = 0.333333
+storing res. (normalized)[nox_save (1319)] = 0.333333
+storing res. (normalized)[pm_save (1320)] = 0.333333
+storing res. (normalized)[so2_save (1321)] = 0.333333
+Stored (itr_id 1882) 7 criteria attr 'res. (normalized)' (id 19) in PREF_VL
+storing asp. (un-scaled)[benefit (1315)] = 51297.366667
+storing asp. (un-scaled)[co2_save (1316)] = 94443.333333
+storing asp. (un-scaled)[fuel_save (1317)] = 3474.656667
+storing asp. (un-scaled)[investment (1318)] = 11652.200000
+storing asp. (un-scaled)[nox_save (1319)] = 1962.690000
+storing asp. (un-scaled)[pm_save (1320)] = 1192.260333
+storing asp. (un-scaled)[so2_save (1321)] = 2088.626667
+Stored (itr_id 1882) 7 criteria attr 'asp. (un-scaled)' (id 18) in PREF_VL
+storing res. (un_scaled)[benefit (1315)] = 45153.433333
+storing res. (un_scaled)[co2_save (1316)] = 80556.666667
+storing res. (un_scaled)[fuel_save (1317)] = 2978.483333
+storing res. (un_scaled)[investment (1318)] = 23304.400000
+storing res. (un_scaled)[nox_save (1319)] = 1682.220000
+storing res. (un_scaled)[pm_save (1320)] = 1021.910667
+storing res. (un_scaled)[so2_save (1321)] = 1790.143333
+Stored (itr_id 1882) 7 criteria attr 'res. (un_scaled)' (id 20) in PREF_VL
+================================================================
+1 iterations found for anal_id 866
+MCMA::ld_sol(): list of iterations: '1882'
+MCMA::ld_sol() cond: ID_ITR in (1882) and ID_ENT = 42 ORDER BY OBJ2_ID, OBJ_ID
+1 solutions available to analysis_id 866.
+1 solutions uploaded
+Storing in DB 1 kept solutions. -----------------------------------
+norm. crit-vals (id_ent 41), itr 1882, task 3886, stored in ITR_ENT_VL
+Solution of task 3886, note () (from main_mcma(), after upload)
+   benefit (max), norm 0.458, min 3.901e+04, val 4.744e+04, max 5.744e+04
+  co2_save (max), norm 0.432, min 6.667e+04, val 8.466e+04, max 1.083e+05
+ fuel_save (max), norm 0.418, min 2.482e+03, val 3.105e+03, max 3.971e+03
+investment (min), norm 0.418, min 0.000e+00, val 2.034e+04, max 3.496e+04
+  nox_save (max), norm 0.418, min 1.402e+03, val 1.753e+03, max 2.243e+03
+   pm_save (max), norm 0.418, min 8.516e+02, val 1.065e+03, max 1.363e+03
+  so2_save (max), norm 0.418, min 1.492e+03, val 1.866e+03, max 2.387e+03
+================================================================
+MCMA::define_cr_mask() ----------------------------------------------
+crit benefit, mag = 3, range 1.84318e+04
+crit co2_save, mag = 3, range 4.16600e+04
+crit fuel_save, mag = 3, range 1.48852e+03
+crit investment, mag = 3, range 3.49566e+04
+crit nox_save, mag = 0, range 8.41410e+02
+crit pm_save, mag = 0, range 5.11049e+02
+crit so2_save, mag = 0, range 8.95450e+02
+MCMA::store_cr_mask() ----------------------------------------------
+low_mask (##.##), upp_mask (##.##), magn (  3) of crit '   benefit' stored.
+low_mask (##.##), upp_mask (###.#), magn (  3) of crit '  co2_save' stored.
+low_mask (#.###), upp_mask (#.###), magn (  3) of crit ' fuel_save' stored.
+low_mask (##.##), upp_mask (#.###), magn (  3) of crit 'investment' stored.
+low_mask (###.#), upp_mask (###.#), magn (  0) of crit '  nox_save' stored.
+low_mask (###.#), upp_mask (###.#), magn (  0) of crit '   pm_save' stored.
+low_mask (###.#), upp_mask (###.#), magn (  0) of crit '  so2_save' stored.
+Storing in DB 1 kept solutions. -----------------------------------
+WARNING: removing 7 old records from ITR_ENT_VL for cond 'ID_ITR = 1882 and ID_ENT = 41'
+norm. crit-vals (id_ent 41), itr 1882, task 3886, stored in ITR_ENT_VL
+Storing preferences -----------------------------------------------
+WARNING: removing 14 old records from PREF_VL for cond 'ID_TASK = 3886 and ID_ENT in (17, 19)'
+storing asp. (normalized)[benefit (1315)] = 0.666667
+storing asp. (normalized)[co2_save (1316)] = 0.666667
+storing asp. (normalized)[fuel_save (1317)] = 0.666667
+storing asp. (normalized)[investment (1318)] = 0.666667
+storing asp. (normalized)[nox_save (1319)] = 0.666667
+storing asp. (normalized)[pm_save (1320)] = 0.666667
+storing asp. (normalized)[so2_save (1321)] = 0.666667
+Stored (itr_id 1882) 7 criteria attr 'asp. (normalized)' (id 17) in PREF_VL
+storing res. (normalized)[benefit (1315)] = 0.333333
+storing res. (normalized)[co2_save (1316)] = 0.333333
+storing res. (normalized)[fuel_save (1317)] = 0.333333
+storing res. (normalized)[investment (1318)] = 0.333333
+storing res. (normalized)[nox_save (1319)] = 0.333333
+storing res. (normalized)[pm_save (1320)] = 0.333333
+storing res. (normalized)[so2_save (1321)] = 0.333333
+Stored (itr_id 1882) 7 criteria attr 'res. (normalized)' (id 19) in PREF_VL
+WARNING: removing 14 old records from PREF_VL for cond 'ID_TASK = 3886 and ID_ENT in (18, 20)'
+storing asp. (un-scaled)[benefit (1315)] = 51297.366667
+storing asp. (un-scaled)[co2_save (1316)] = 94443.333333
+storing asp. (un-scaled)[fuel_save (1317)] = 3474.656667
+storing asp. (un-scaled)[investment (1318)] = 11652.200000
+storing asp. (un-scaled)[nox_save (1319)] = 1962.690000
+storing asp. (un-scaled)[pm_save (1320)] = 1192.260333
+storing asp. (un-scaled)[so2_save (1321)] = 2088.626667
+Stored (itr_id 1882) 7 criteria attr 'asp. (un-scaled)' (id 18) in PREF_VL
+storing res. (un_scaled)[benefit (1315)] = 45153.433333
+storing res. (un_scaled)[co2_save (1316)] = 80556.666667
+storing res. (un_scaled)[fuel_save (1317)] = 2978.483333
+storing res. (un_scaled)[investment (1318)] = 23304.400000
+storing res. (un_scaled)[nox_save (1319)] = 1682.220000
+storing res. (un_scaled)[pm_save (1320)] = 1021.910667
+storing res. (un_scaled)[so2_save (1321)] = 1790.143333
+Stored (itr_id 1882) 7 criteria attr 'res. (un_scaled)' (id 20) in PREF_VL
+1 iterations found for anal_id 866
+MCMA::ld_sol(): list of iterations: '1882'
+MCMA::ld_sol() cond: ID_ITR in (1882) and ID_ENT = 42 ORDER BY OBJ2_ID, OBJ_ID
+1 solutions available to analysis_id 866.
+1 solutions uploaded
+MCMA::selfish() ---------------------------------------------------- 
+Generating iteration 1883 (task 3915) for selfish opt of benefit
+MCMA called: /tool/www/cgi-bin/marek/mcma_t -itr_id 1883 &
+Generating iteration 1884 (task 3916) for selfish opt of co2_save
+MCMA called: /tool/www/cgi-bin/marek/mcma_t -itr_id 1884 &
+Generating iteration 1885 (task 3917) for selfish opt of fuel_save
+MCMA called: /tool/www/cgi-bin/marek/mcma_t -itr_id 1885 &
+Generating iteration 1886 (task 3918) for selfish opt of investment
+MCMA called: /tool/www/cgi-bin/marek/mcma_t -itr_id 1886 &
+Generating iteration 1887 (task 3919) for selfish opt of nox_save
+MCMA called: /tool/www/cgi-bin/marek/mcma_t -itr_id 1887 &
+Generating iteration 1888 (task 3920) for selfish opt of pm_save
+MCMA called: /tool/www/cgi-bin/marek/mcma_t -itr_id 1888 &
+Generating iteration 1889 (task 3921) for selfish opt of so2_save
+MCMA called: /tool/www/cgi-bin/marek/mcma_t -itr_id 1889 &
+
+
+-----------------------------------------------------------------
+MCMA::dots(): dots and boxplot for 1 solutions.
+Only 1 solutions available, no boxplot generated
+================================================================
+<pre>CPU times (for the marked elements of the application):
+MCMA ctor:   0.01 sec.
+load data:   0.04 sec.
+payoff:   0.48 sec.
+neutral sol.:   0.02 sec.
+post-processing:   0.05 sec.
+CPU time (total):  0.60 sec.
+Total wall-clock time:  67.00 sec.
+mcma_main(): 0 errors on exit.
+  922  1882 Wed Jul 14 12:20:35  ?????
+MCMA finished on Wed Jul 14 12:20:35 2021
