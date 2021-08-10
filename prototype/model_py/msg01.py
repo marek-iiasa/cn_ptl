@@ -21,6 +21,8 @@ It would be good to ind out how to change this (default?) location.
 
 # import pandas as pd  (not needed yet)
 # The following two imports result in errors ("No module named ixmp") but the code works despite the reported errors
+import pathlib
+
 import ixmp
 import message_ix
 
@@ -32,10 +34,11 @@ mp = ixmp.Platform()
 #  if the DB is locked then remove ~/.local/share/ixmp/localdb/default.lck
 
 # Creating a new, empty scenario
-scenario = message_ix.Scenario(mp, model='PTL baseline', scenario='baseline_xlsx', version='new')
+scenario = message_ix.Scenario(mp, model='ptl', scenario='baseline_xlsx', version='new')
 
 horizon = range(2020, 2051, 5)
-scenario.add_horizon(year=horizon)
+scenario.add_horizon(year=list(horizon))    # the list cast added to avoid warning
+# scenario.add_horizon(year=horizon)
 
 node = 'Chinese'
 scenario.add_spatial_sets({'country': node})
@@ -44,19 +47,20 @@ scenario.add_par("interestrate", horizon, value=0.06, unit='-')
 scenario.add_set("level", ["primary", "secondary", "final", "useful"])
 
 data_dir = '../data/'   # directory the data files
-scenario.read_excel(data_dir + 'demand.xlsx', add_units=True, commit_steps=False)
+scenario.read_excel(pathlib.Path(data_dir + 'demand.xlsx'), add_units=True, commit_steps=False)
+# scenario.read_excel(data_dir + 'demand.xlsx', add_units=True, commit_steps=False)
 print(scenario.idx_names('demand'))
 
 scenario.add_set("technology", ['oil_exc', 'oil_import', 'coal_exc', 'renewable_hydrogen', 'CO2_capture',
                  'biomass_exc', 'OTL', 'CTL', 'PTL', 'BTL', 'Transportation'])
-scenario.read_excel(data_dir + 'basic.xlsx', add_units=True, commit_steps=False)
+scenario.read_excel(pathlib.Path(data_dir + 'basic.xlsx'), add_units=True, commit_steps=False)
 scenario.set('technology')
 scenario.par('capacity_factor')
-scenario.read_excel(data_dir + 'constraint.xlsx', add_units=True, commit_steps=False)
-scenario.read_excel(data_dir + 'historic.xlsx', add_units=True, commit_steps=False)
+scenario.read_excel(pathlib.Path(data_dir + 'constraint.xlsx'), add_units=True, commit_steps=False)
+scenario.read_excel(pathlib.Path(data_dir + 'historic.xlsx'), add_units=True, commit_steps=False)
 
 mp.add_unit('CNY/t')
-scenario.read_excel(data_dir + 'economic.xlsx', add_units=True, commit_steps=False)
+scenario.read_excel(pathlib.Path(data_dir + 'economic.xlsx'), add_units=True, commit_steps=False)
 
 scenario.set_as_default()
 scenario.solve()
