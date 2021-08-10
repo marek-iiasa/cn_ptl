@@ -9,10 +9,13 @@ VARIABLES
 EQUATIONS
     cons1
 ;
+
+x1.lo = 0;
 x2.lo = 0;
 x3.lo = 0;
 
 cons1..   x1 + x2 + x3 =l= 30 ;
+
 OPTION LP = BDMLP ;
 
 * mc-file name defined as the mca-arg on the cmd line
