@@ -310,8 +310,24 @@ Equations
 *    OBJ = \sum_{n,y \in Y^{M}} df\_period_{y} \cdot COST\_NODAL_{n,y}
 *
 ***
+$ontext
 OBJECTIVE..
     OBJ =E= SUM( (node,year), df_period(year) * COST_NODAL(node,year) ) ;
+$offtext
+***
+
+OBJEVTIVE..
+   OBJ
+    =E=
+    SUM(location$( map_node(node,location) ),
+* emissions from technology activity
+        SUM((tec,vintage,mode,time)$( cat_tec(type_tec,tec)
+            AND map_tec_act(location,tec,year,mode,time) AND map_tec_lifetime(location,tec,vintage,year) ),
+        emission_factor(location,tec,vintage,year,mode,emission) * ACT(location,tec,vintage,year,mode,time) )
+* emissions from land use if 'type_tec' is included in the dynamic set 'type_tec_land'
+        + SUM(land_scenario$( type_tec_land(type_tec) ),
+            land_emission(location,land_scenario,year,emission) * LAND(location,land_scenario,year) )
+      ) ;
 
 ***
 * Regional system cost accounting function
