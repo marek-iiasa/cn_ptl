@@ -1,0 +1,3 @@
+rm -f run.log
+gams master.gms --in=data/ptl.gdx > run.log
+less run.log
