@@ -315,7 +315,6 @@ OBJECTIVE..
     OBJ =E= SUM( (node,year), df_period(year) * COST_NODAL(node,year) ) ;
 $offtext
 ***
-
 OBJEVTIVE..
    OBJ
     =E=
