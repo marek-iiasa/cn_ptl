@@ -1,0 +1,90 @@
+106c106,108
+<     OBJ objective value of the optimisation problem
+---
+>   OBJ objective value of the optimisation problem
+>   CO2_CUM Total co2
+>   COST_CUM Total cost
+249a252,253
+> *   CO2_CUM_DEF                     definition of total CO2 emission
+>     COST_CUM_DEF                    definition of the total cost
+327a332,365
+> COST_CUM_DEF..
+>     COST_CUM =E= SUM( (node,year), df_period(year) * COST_NODAL(node,year) ) ;
+> $ontext
+> CO2_CUM_DEF..
+>     CO2_CUM =E=
+> *    SUM( (node,emission,type_tec,year),
+>            SUM((type_emission,emission,type_tec,type_year)$( emission_scaling(type_emission,emission)
+>            AND cat_year(type_year,year)) * EMISS(node,emission,type_tec,year) ) ;
+> $offtext
+> $ontext
+> * emission taxes (by parent node, type of technology, type of year and type of emission)
+>     + SUM((type_emission,emission,type_tec,type_year)$( emission_scaling(type_emission,emission)
+>             AND cat_year(type_year,year) ),
+>         emission_scaling(type_emission,emission)
+>         * tax_emission(node,type_emission,type_tec,type_year)
+>         * EMISS(node,emission,type_tec,year) )           
+> $offtext   
+> $ontext    
+> sum( (node,type_emission,type_tec,type_year) $ (SAMEAS(type_emission, 'GHGs') AND SAMEAS(type_year,'cumulative')),
+>          sum( (location,tec,year_all2,mode,time,emission)$( map_node(node,location) AND cat_tec(type_tec,tec)
+>                  AND cat_year(type_year,year_all2) AND cat_emission(type_emission,emission)
+>                  AND map_tec_act(location,tec,year_all2,mode,time) ) ,
+>              duration_period(year_all2)
+>              * emission_scaling(type_emission,emission) * emission_factor(location,tec,year_all2,mode,emission)
+>              * ( sum(vintage$( map_tec_lifetime(location,tec,vintage,year_all2) AND year(year_all2) ),
+>                  ACT(location,tec,vintage,year_all2,mode,time) )
+>              + historical_activity(location,tec,year_all2,mode,time)
+>                  )
+>              )
+>          / sum(year_all2$( cat_year(type_year,year_all2) ), duration_period(year_all2) )
+>        )
+> ;
+> $offtext
+> $ontext
+329c367
+<     OBJ =E= SUM( (node,year), df_period(year) * COST_NODAL(node,year) ) ;
+---
+>            OBJ =E= SUM( (node,year), df_period(year) * COST_NODAL(node,year) ) ;
+330a369,391
+>   OBJECTIVE..
+>            OBJ =E= sum( (node,type_emission,type_tec,type_year) $ (SAMEAS(type_emission, 'GHGs') AND SAMEAS(type_year,'cumulative')),
+>          sum( (location,tec,year_all2,mode,time,emission)$( map_node(node,location) AND cat_tec(type_tec,tec)
+>                  AND cat_year(type_year,year_all2) AND cat_emission(type_emission,emission)
+>                  AND map_tec_act(location,tec,year_all2,mode,time) ) ,
+>              duration_period(year_all2)
+>              * emission_scaling(type_emission,emission) * emission_factor(location,tec,year_all2,mode,emission)
+>              * ( sum(vintage$( map_tec_lifetime(location,tec,vintage,year_all2) AND year(year_all2) ),
+>                  ACT(location,tec,vintage,year_all2,mode,time) )
+>              + historical_activity(location,tec,year_all2,mode,time)
+>                  )
+>              )
+>          / sum(year_all2$( cat_year(type_year,year_all2) ), duration_period(year_all2) )
+>        )
+> ;  
+> *    EMI =E= SUM( (node,emission,type_tec,year), df_period(year) * SUM((type_emission,emission,type_tec,type_year)$( emission_scaling(type_emission,emission)
+> *           AND cat_year(type_year,year)* EMISS(node,emission,type_tec,year) ),
+>     
+> *    EMISS(node,emission,type_tec,year)
+> * emissions from technology activity
+> *       SUM((tec,vintage,mode,time)$( cat_tec(type_tec,tec)
+> *            AND map_tec_act(location,tec,year,mode,time) AND map_tec_lifetime(location,tec,vintage,year) ),
+> *        emission_factor(location,tec,vintage,year,mode,emission) * ACT(location,tec,vintage,year,mode,time) )
+331a393,401
+> $offtext
+> OBJECTIVE..
+>     OBJ =E= COST_CUM
+> *   OBJ =E= CO2
+>    
+> 
+> 
+> ***
+> 
+1675a1746
+> 
+1709c1780
+< 
+---
+>  
+1743a1815
+> 
