@@ -1,0 +1,30 @@
+106c106,108
+<     OBJ objective value of the optimisation problem
+---
+>   OBJ objective value of the optimisation problem
+>   CO2_CUM Total co2
+>   COST_CUM Total cost
+249a252,253
+> *   CO2_CUM_DEF                     definition of total CO2 emission
+>     COST_CUM_DEF                    definition of the total cost
+327a332,334
+> COST_CUM_DEF..
+>     COST_CUM =E= SUM( (node,year), df_period(year) * COST_NODAL(node,year) ) ;
+> 
+329c336,339
+<     OBJ =E= SUM( (node,year), df_period(year) * COST_NODAL(node,year) ) ;
+---
+>     OBJ =E= COST_CUM
+> *   OBJ =E= CO2
+>    
+> 
+331a342
+> 
+1675a1687
+> 
+1709c1721
+< 
+---
+>  
+1743a1756
+> 
