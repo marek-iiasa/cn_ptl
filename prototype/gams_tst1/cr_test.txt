@@ -6,3 +6,5 @@ on macos:
 git config --global core.autocrlf input
 
 Then modify this file by adding two below short lines on windows, and commit the change.
+this is one line
+this is another line
