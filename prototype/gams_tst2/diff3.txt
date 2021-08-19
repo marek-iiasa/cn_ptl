@@ -1,0 +1,6 @@
+336,337c336,337
+<     OBJ =E= COST_CUM ;
+< *   OBJ =E= CO2 ;
+---
+>     OBJ =E= COST_CUM
+> *   OBJ =E= CO2
