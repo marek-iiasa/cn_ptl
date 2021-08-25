@@ -20,7 +20,7 @@ Equations
 	;
 * Ad-hoc scaling parameter
 Parameter
-	scal_cost	'scaling costs (from RMB to RMB)'  / 1.e-6 / ;
+	scal_cost	'scaling costs (from RMB to mln of RMB)'  / 1.e-6 / ;
 *
 * Definitions of the outcome variables
 * NOTE: the definitions use parameters and variables of the core model
