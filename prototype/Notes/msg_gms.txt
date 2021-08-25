@@ -1,0 +1,27 @@
+Structure of msg_ix*.gms includes
+
+master.gms
+$INCLUDE MESSAGE/model_setup.gms
+	$INCLUDE MESSAGE/auxiliary_settings.gms
+		(none)
+	$INCLUDE version.gms
+		(none)
+	$INCLUDE MESSAGE/version_check.gms
+		(none)
+	$INCLUDE MESSAGE/sets_maps_def.gms
+		(none)
+	$INCLUDE MESSAGE/parameter_def.gms
+		(none)
+	$INCLUDE MESSAGE/data_load.gms
+		$INCLUDE includes/period_parameter_assignment.gms
+			???
+	$INCLUDE MESSAGE/scaling_investment_costs.gms
+		(none)
+	$INCLUDE MESSAGE/model_core.gms
+		(none)
+
+$INCLUDE MESSAGE/model_solve.gms
+	$$INCLUDE includes/aux_computation_time.gms        (double $$ ?)
+		???
+$INCLUDE MESSAGE/reporting.gms
+	(none)
