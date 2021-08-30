@@ -97,7 +97,8 @@ locs, labels = plt.xticks()
 plt.setp(labels, rotation=45)   # rotation does not work if these two lines follow ax/ax2
 ax = sns.lineplot(data=cost_co2, x='itr', y='cost', color='red', label='cost')  # , ax=ax)
 ax2 = ax.twinx()
-ax.grid(False)  # two grids are confusing
+# ax.grid(False)  # two grids are confusing
+ax2.grid(axis='both', which='both')
 sns.lineplot(data=cost_co2, x='itr', y='co2', color='green', label='CO2 emission', ax=ax2)
 ax.set_title('Total cost vs total CO2 emission trade-offs for 23 MCMA iterations (sorted by increasing cost)')
 ax.set_xlabel('Iteration id')
@@ -110,6 +111,6 @@ ax2.legend(loc='center right', handles=hand1+hand2, labels=lab1+lab2)   # overla
 
 plt.show()
 fig_name = '945/cost_co2.png'
-fig1.savefig(fig_name)
-print('Figure stored in ' + fig_name)
-# print('Figure NOT stored in ' + fig_name)
+# fig1.savefig(fig_name)
+# print('Figure stored in ' + fig_name)
+print('Figure NOT stored in ' + fig_name)
