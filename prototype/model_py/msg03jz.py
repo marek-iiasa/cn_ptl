@@ -25,7 +25,7 @@ import pathlib
 
 import ixmp
 import message_ix
-
+from matplotlib import pyplot as plt
 # the following commented because in pycharm it gives error
 # get_ipython().run_line_magic('matplotlib', 'inline')
 
@@ -73,5 +73,21 @@ scenario.solve()
 # base = message_ix.Scenario(mp, model='PTL model attempt', scenario='baseline')
 # base.var('OBJ')['lvl']
 # scenario.var('OBJ')['lvl']
+from message_ix.reporting import Reporter
+rep = Reporter.from_scenario(scenario)
+from message_ix.util.tutorial import prepare_plots
+prepare_plots(rep)
+# Only show a subset of technologies in the follow plots;
+rep.set_filters(t=["oil_exc", "oil_import"])
+# Trigger the calculation and plotting
+rep.get("plot activity")
+
+# Only show a subset of technologies in the follow plots;
+rep.set_filters(t=["OTL", "CTL","PTL","BTL"])
+
+# Trigger the calculation and plotting
+rep.get("plot activity")
+rep.get("plot capacity")
+plt.show()
 
 mp.close_db()
