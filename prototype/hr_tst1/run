@@ -1,0 +1,2 @@
+# gams master.gms -ll=2 -lo=2 --in=data/demand0.gdx
+gams master.gms -ll=2 -lo=2 --in=data/demand.gdx
