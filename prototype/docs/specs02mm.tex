@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{fullpage,times}
+\usepackage{verbatim}  % for comments
+% \usepackage{euro}
+% \EUR~10.10
+
+%\input{Figs}
+\input mm_macros.tex
+
+\DeclareMathAlphabet{\mathbit}{OT1}{cmr}{bx}{it}
+\def\vv#1{\ensuremath{\mathbit{\bf #1}}}
+
+
+\begin{document}
+\thispagestyle{empty}
+\pagestyle{plain}
+\centerline{\Large\bf Comments on the specs02.pdf}
+\bigskip
+
+\centerline{\large\bf {\em Marek}}
+\bigskip
+
+\centerline{\sc \today}
+
+\bigskip
+\bigskip
+
+In order to assure consistency between the problem formulation and the
+corresponding model, I would consider replacement of the obviously incorrect
+inequality~(9) by:
+\btla{88.}
+\inum Equation defining the amounts of each of the fuels as a function of
+the activities of the applied technologies:
+	\be
+	\sum_{i \in I} a_{ji} \cdot ACT_i^t = x_j^t, \quad j \in J,\; t \in T
+	\ee
+	where:
+	\btlbs
+	\item $j$ denotes fuel type, $J = \{gasoline, diesel\}$,
+	\item $a_{ji}$ relates the amount of $j$-th fuel produced by the unit of
+		$i$-th ACT,
+	\item $x_j^t$ stands for the amount of $j$-th fuel produced jointly by all
+		considered technologies.
+	\etls
+\inum Adding the supply-demand constraint, specification of which depends on the
+	chosen definition of demand. Here we can consider one of the following two options:
+	\btlas{88.}
+	\inums If the demand is given for each fuel type, i.e., as $d_j^t$, then:
+		\be\label{eq:dem1}
+		x_j^t \ge d_j^t, \quad j \in J, t \in T.
+		\ee
+	\inums If the demand is given for a linear aggregation of $d_j^t$, e.g.,
+		by coefficients $\alpha_j$ conforming to:
+		\be
+		0 \le \alpha_j \le 1,\; \forall j \in J; \quad \sum_{j \in J} \alpha_j = 1.
+		\ee
+		In such a case constraint~(\ref{eq:dem1}) shall be replaced by:
+		\be
+		\sum_{j \in J} \alpha_j x_j^t \ge d^t, \quad t \in T.
+		\ee
+	\etls
+\etl
+
+\end{document}
