@@ -40,23 +40,28 @@ the activities of the applied technologies:
 	\item $a_{ji}$ relates the amount of $j$-th fuel produced by the unit of
 		$i$-th ACT,
 	\item $x_j^t$ stands for the amount of $j$-th fuel produced jointly by all
-		considered technologies.
+		considered technologies at period~$t$.
 	\etls
 \inum Adding the supply-demand constraint, specification of which depends on the
 	chosen definition of demand. Here we can consider one of the following two options:
 	\btlas{88.}
 	\inums If the demand is given for each fuel type, i.e., as $d_j^t$, then:
 		\be\label{eq:dem1}
-		x_j^t \ge d_j^t, \quad j \in J, t \in T.
+		x_j^t \ge d_j^t, \quad j \in J,\; t \in T.
 		\ee
 	\inums If the demand is given for a linear aggregation of $d_j^t$, e.g.,
 		by coefficients $\alpha_j$ conforming to:
 		\be
 		0 \le \alpha_j \le 1,\; \forall j \in J; \quad \sum_{j \in J} \alpha_j = 1.
 		\ee
-		In such a case constraint~(\ref{eq:dem1}) shall be replaced by:
+		Thus, the demand is given for a {\em virtual} (i.e., not actually existing)
+		fuel:
 		\be
-		\sum_{j \in J} \alpha_j x_j^t \ge d^t, \quad t \in T.
+			d^t = \sum_{j \in J} \alpha_j \cdot d_j^t, \quad t \in T.
+		\ee
+		In such a case instead constraint~(\ref{eq:dem1}) one shall add constraint:
+		\be
+		\sum_{j \in J} \alpha_j \cdot x_j^t \ge d^t, \quad t \in T.
 		\ee
 	\etls
 \etl
