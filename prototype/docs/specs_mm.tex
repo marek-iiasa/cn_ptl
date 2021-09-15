@@ -1,0 +1,226 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{fullpage,times}
+\usepackage{verbatim}  % for comments
+% \usepackage{euro}
+% \EUR~10.10
+
+%\input{Figs}
+\input mm_macros.tex
+
+\DeclareMathAlphabet{\mathbit}{OT1}{cmr}{bx}{it}
+\def\vv#1{\ensuremath{\mathbit{\bf #1}}}
+
+
+\begin{document}
+\thispagestyle{empty}
+\pagestyle{plain}
+\centerline{\Large\bf Comments on the specs03.pdf, version of Sep.~15}
+\bigskip
+
+\centerline{\large\bf {\em Marek}}
+\bigskip
+
+\centerline{\sc \today}
+
+\bigskip
+\bigskip
+
+{\em Note:} This draft is rather an illustration how to write the SMS
+than an advanced SMS draft.
+The purpose of this draft is to provide a background for discussion on how
+to proceed.
+
+\subsection*{Editorial}
+Please ALWAYS place your name and the current date on ANY document.
+
+\section{Symbolic model specification (SMS)}
+The SMS documents all model entities (indexing structure, variables,
+parameters, relations).
+This draft is an incomplete SMS aimed at illustrating the SMS structure
+and basic elements.
+
+\subsection{The model purpose}
+The model aims at supporting analysis of the relations between the decisions
+and consequences of their implementation.
+The latter is represented by the outcome variables.
+
+\subsection{Indexing structure}
+\subsubsection{Intro to indexing structure}
+The SMS uses the Structured Modeling (SM) concepts; in particular the
+compound entities.
+For example, a compound variable $\vv{x}$ actually represents a set of variables
+$x_{ij}, i \in I,\; j \in J$, where $i$ and $j$ stand for indices, and $I$ and
+$J$ are the sets of values of the corresponding indices.
+To illustrate this concept, let $\vv{x}$ be flows between $i$-th warehouse
+and $j$-th store.
+Then the set $I$ of warehouses can be defined as $I = \{city1, city2, \dots\}$.
+Similarly, the set $J$ of shops can be defined as $J = \{loc1, loc2, \dots\}$.
+
+Thus, the indexing structure is composed of:
+\btlb
+\item symbols of indices (typically a lower-case letter), and
+\item symbols of sets (typically, the corresponding upper-case letter).
+\etl
+The examples of the index-sets below are for illustration only.
+The actual members of these sets are defined by the model parameters.
+
+\subsubsection{Indexing structure of the model}\label{sec:index}
+The model uses the following indices and the corresponding sets:
+\btlb
+\item $t \in T$ technologies, $T = \{ {\rm OTL, BTL, PTL,} \dots \}$,
+	$T_f \subset T$ technologies directly producing the final commodities
+\item $y \in Y$ 5-year period id, $Y = \{ {\rm 2020, 2025, \dots 2050} \}$,
+\item Using the convention for periods defined by the sequence (2020, \dots, 2050)
+	causes complicated definitions of the corresponding relations (see below).
+	Therefore I would consider to use another index for periods, say~$p \in P$,
+	where $P = \{-\tau, -tau +1, \dots, 1, 2, \dots, 7\}$, where non-positive
+	values correspond to historical (before the planning period) periods.
+	This will allow easy definitions and use of historical and current new capacities.
+	The correspondence between $Y$ and $P$ can be defined by a simple mapping.
+	In the formulae below I use the $p \in P$ instead of $y \in Y}.\footnote{
+	Let's discuss this issues.}
+\item $v \in V$ vintage (construction time) period id,
+	$V = H \cup \{ {\rm 2020, 2025, \dots 2050} \}$,
+	where $H$ is the set of historical (previous) periods for which the
+	corresponding new capacities are defined by the data,
+\item $c \in C$ commodity, $C = \{ {\rm oil, gasoline, coal, crude-oil, \dots } \}$,
+	$C_f \subset C$: final commodities,
+\item \dots
+\etl
+{\em Notes for Jinyang}:
+\btlb
+\item We probably need to define subsets of~$C$, e.g., for dealing with final
+	commodities.
+\item I strongly recommend to refrain from using $v^y$ (or any other symbol defined
+	by a letter with subscript/superscript) for an index.
+	Therefore, I propose to use~$v$ for the vintage year index.
+\etl
+
+\subsection{Variables}
+Although all variables are treated equally within the model,
+we divide the set of all model variables into categories corresponding to the roles;
+this helps for structuring the model presentation.
+
+\subsubsection{Decision variables}
+Decision-makers control the modeled system by decision (control) variables:
+\btlb
+\item $ncap_{tv}, t \in T, v \in V$: new production capacity of $t$-th
+	technology, made available at the beginning of $p$-th period,
+\item $act_{tvp}, t \in T, v \in V, p \in P$: activity level of $t$-th
+	technology, using in period $p$ the new capacity provided in period~$v$.
+\etl
+{\em Editorial notes}:
+\btlb
+\item We use\footnote{JZ: it is up to you, which of these two notations
+	you want to use. For the compactness I usually use the short one.}
+	a short notation, i.e., $x_{ijk}$ instead of $x_{i,j,k}$.
+\item Further on we skip the obvious explanations of the meaning of the
+	indices.
+\etl
+
+\subsubsection{Outcome variables}
+Outcome variables are used for evaluation of the consequences of implementation
+of the decisions; therefore at least one of them is used as the optimization
+objective.
+
+In the model prototype only two outcomes (both used as criteria in
+multiple-criteria model analysis) are defined:
+\btlb
+\item $cost$: the total cost of the system over the planning period, and
+\item $CO2$: the total CO2 emission caused by the system.
+\etl
+
+\subsubsection{State variables}
+The variables defining the state of the system:
+\btlb
+\item $cap_{tp}$: production capacity. {\em Note: this may not be needed,
+	let's consider the relations defined in Section~\ref{sec:rel} and discuss.}
+\item \dots
+\etl
+
+\subsubsection{Auxiliary variables}
+All other variables used in the SMS:
+\btlb
+\item \dots
+\etl
+
+\subsection{Parameters}
+The following model parameters are used in the model relations 
+specified in in Section~\ref{sec:rel}:
+\btlb
+\item values of indices (members of sets) specified in Section~\ref{sec:index},
+\item $\tau_t$: lifetime (number of periods) of the new capacity,
+\item $d_{cp}, c \in C_f$: demand for final commodities defined by $C_f \subset C$
+\item $a_{tvc}$: amount of product from the unit of the corresponding activity
+\etl
+
+\subsection{Relations}\label{sec:rel}
+The values of the model variables conform to the following model relations.
+\btlb
+\item The sum of activities $act_{tvp}$ shall shall result in producing the required
+	amounts of the final commodities:
+	\be
+	\sum_{t \in T_f} \sum_{v \in V_{tp}} a_{tvc} \cdot act_{tvp} \ge d_{cp} \quad
+		c \in C_f, p \in P.
+	\ee
+	where $V_{tp} \subset V$ is defined by:
+	\be
+		V_{tp} = \{p - tau_t, p - tau_t + 1, \dots, p\}
+	\ee
+\item The levels of activities cannot exceed the corresponding capacities:
+	\be
+		act_{tvp} \le ncap_{tvp}, \quad t \in T, v \in V_p, p \in P.
+	\ee
+	Note: The values new capacities $ncap_{tvp}$ within the planning period
+	($v \in P$) are defined by the decision variables.
+	However, for the non-positive values of $V_{tp}$ (i.e., historical investments)
+	are defined by the model parameters.
+\etl
+
+
+
+
+\newpage
+\section*{Copy of comments of Sep.~1, 2021}
+In order to assure consistency between the problem formulation and the
+corresponding model, I would consider replacement of the obviously incorrect
+inequality~(9) by:
+\btla{88.}
+\inum Equation defining the amounts of each of the fuels as a function of
+the activities of the applied technologies:
+	\be
+	\sum_{i \in I} a_{ji} \cdot ACT_i^t = x_j^t, \quad j \in J,\; t \in T
+	\ee
+	where:
+	\btlbs
+	\item $j$ denotes fuel type, $J = \{gasoline, diesel\}$,
+	\item $a_{ji}$ relates the amount of $j$-th fuel produced by the unit of
+		$i$-th ACT,
+	\item $x_j^t$ stands for the amount of $j$-th fuel produced jointly by all
+		considered technologies at period~$t$.
+	\etls
+\inum Adding the supply-demand constraint, specification of which depends on the
+	chosen definition of demand. Here we can consider one of the following two options:
+	\btlas{88.}
+	\inums If the demand is given for each fuel type, i.e., as $d_j^t$, then:
+		\be\label{eq:dem1}
+		x_j^t \ge d_j^t, \quad j \in J,\; t \in T.
+		\ee
+	\inums If the demand is given for a linear aggregation of $d_j^t$, e.g.,
+		by coefficients $\alpha_j$ conforming to:
+		\be
+		0 \le \alpha_j \le 1,\; \forall j \in J; \quad \sum_{j \in J} \alpha_j = 1.
+		\ee
+		Thus, the demand is given for a {\em virtual} (i.e., not actually existing)
+		fuel:
+		\be
+			d^t = \sum_{j \in J} \alpha_j \cdot d_j^t, \quad t \in T.
+		\ee
+		In such a case instead constraint~(\ref{eq:dem1}) one shall add constraint:
+		\be
+		\sum_{j \in J} \alpha_j \cdot x_j^t \ge d^t, \quad t \in T.
+		\ee
+	\etls
+\etl
+
+\end{document}
