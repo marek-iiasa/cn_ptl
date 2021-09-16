@@ -10,6 +10,13 @@
 \DeclareMathAlphabet{\mathbit}{OT1}{cmr}{bx}{it}
 \def\vv#1{\ensuremath{\mathbit{\bf #1}}}
 
+\usepackage{amsmath}
+\usepackage{lineno}
+% \usepackage{showlabels}
+
+\pagestyle{plain}
+\thispagestyle{plain}
+
 
 \begin{document}
 \thispagestyle{empty}
@@ -25,13 +32,13 @@
 \bigskip
 \bigskip
 
-{\em Note:} This draft is rather an illustration how to write the SMS
-than an advanced SMS draft.
-The purpose of this draft is to provide a background for discussion on how
-to proceed.
+\linenumbers
+
+{\em Note:} This draft contains a still incomplete SMS.
 
 \subsection*{Editorial}
-Please ALWAYS place your name and the current date on ANY document.
+Please ALWAYS place on ANY document: your name, the current date, page
+numbers, and line numbers.
 
 \section{Symbolic model specification (SMS)}
 The SMS documents all model entities (indexing structure, variables,
@@ -41,8 +48,9 @@ and basic elements.
 
 \subsection{The model purpose}
 The model aims at supporting analysis of the relations between the decisions
-and consequences of their implementation.
-The latter is represented by the outcome variables.
+on the use-level of the technologies for producing liquid fuels, and the consequences
+of implementation of such decisions.
+The consequences are measured by values of the outcome variables.
 
 \subsection{Indexing structure}
 \subsubsection{Intro to indexing structure}
@@ -67,33 +75,43 @@ The actual members of these sets are defined by the model parameters.
 \subsubsection{Indexing structure of the model}\label{sec:index}
 The model uses the following indices and the corresponding sets:
 \btlb
-\item $t \in T$ technologies, $T = \{ {\rm OTL, BTL, PTL,} \dots \}$,
+\item $t \in T$ technologies: $T = \{ {\rm OTL, BTL, PTL,} \dots \}$,
 	$T_f \subset T$ technologies directly producing the final commodities
-\item $y \in Y$ 5-year period id, $Y = \{ {\rm 2020, 2025, \dots 2050} \}$,
-\item Using the convention for periods defined by the sequence (2020, \dots, 2050)
-	causes complicated definitions of the corresponding relations (see below).
-	Therefore I would consider to use another index for periods, say~$p \in P$,
-	where $P = \{-\tau, -tau +1, \dots, 1, 2, \dots, 7\}$, where non-positive
-	values correspond to historical (before the planning period) periods.
-	This will allow easy definitions and use of historical and current new capacities.
-	The correspondence between $Y$ and $P$ can be defined by a simple mapping.
-	In the formulae below I use the $p \in P$ instead of $y \in Y}.\footnote{
-	Let's discuss this issues.}
-\item $v \in V$ vintage (construction time) period id,
-	$V = H \cup \{ {\rm 2020, 2025, \dots 2050} \}$,
-	where $H$ is the set of historical (previous) periods for which the
-	corresponding new capacities are defined by the data,
-\item $c \in C$ commodity, $C = \{ {\rm oil, gasoline, coal, crude-oil, \dots } \}$,
-	$C_f \subset C$: final commodities,
-\item \dots
+\item $p \in P$: the ids of the 5-year planing periods.
+	Instead of using the calendar-year values, we use sequence of positive integer
+	values, i.e., for the calendar years \{2020, 2025, \dots, 2050\} we index
+	the planning periods by $P = \{1, 2, \dots, 7\}$.
+	The correspondence between the planning periods and the calendar years
+	can be defined (for reporting) by a simple mapping.
+\item $v \in V$: vintage (period in which the capacity becomes available) period id.
+	The duration (consecutive periods during which the capacity remains available)
+	of each newly installed capacity is defined by the parameter~$\tau$;
+	e.g, $\tau = 4$ defines the duration of the capacity equal to 4 periods,
+	i.e., 20 years.
+	Therefore, $V = H \cup P$ where $H$ is the set of historical (prior to the
+	first planning period) periods in which the installed capacities can still
+	be used during the planning periods.
+	Thus, for $\tau$ equal to 4, $H = \{-2, -1, 0\}$, i.e., the capacities
+	installed in any of the three periods before the first planning period
+	are available to be used in the first planning period.
+\item $c \in C$: commodity. E.g.,
+	$C = \{ {\rm oil, gasoline, coal, crude-oil, \dots } \}$.
+	Commodities belong to diverse subsets that correspond to their roles:
+	\btlas{$\diamond$}
+	\item $C_f \subset C$: final commodities (currently: gasoline and diesel-oil),
+	\item $C_i \subset C$: commodities required as inputs for activities of
+		technologies~$t \in T$,
+	\item \dots  (more subsets shall be defined).
+	\etls
+\item \dots (more indices may be needed).
 \etl
 {\em Notes for Jinyang}:
 \btlb
-\item We probably need to define subsets of~$C$, e.g., for dealing with final
-	commodities.
 \item I strongly recommend to refrain from using $v^y$ (or any other symbol defined
 	by a letter with subscript/superscript) for an index.
-	Therefore, I propose to use~$v$ for the vintage year index.
+	Therefore, I propose to use~$v$ for the vintage period index.
+\item We don't need in the SMS:
+	$y \in Y$ 5-year period id, $Y = \{ {\rm 2020, 2025, \dots 2050} \}$.
 \etl
 
 \subsection{Variables}
@@ -104,8 +122,11 @@ this helps for structuring the model presentation.
 \subsubsection{Decision variables}
 Decision-makers control the modeled system by decision (control) variables:
 \btlb
-\item $ncap_{tv}, t \in T, v \in V$: new production capacity of $t$-th
-	technology, made available at the beginning of $p$-th period,
+\item $cap_{tv}, t \in T, v \in P$: new production capacity of $t$-th
+	technology, made available at the beginning of $v$-th period,\footnote{
+	I don't think we need "new" capacities, because capacities are indexed
+	by $v$, which means that each capacity was "new" in $v$-th period, and
+	remains available in this period as well as in $\tau - 1$ following periods.}
 \item $act_{tvp}, t \in T, v \in V, p \in P$: activity level of $t$-th
 	technology, using in period $p$ the new capacity provided in period~$v$.
 \etl
@@ -114,34 +135,32 @@ Decision-makers control the modeled system by decision (control) variables:
 \item We use\footnote{JZ: it is up to you, which of these two notations
 	you want to use. For the compactness I usually use the short one.}
 	a short notation, i.e., $x_{ijk}$ instead of $x_{i,j,k}$.
-\item Further on we skip the obvious explanations of the meaning of the
-	indices.
+\item Further on, we skip the obvious explanations of the meaning of the indices.
 \etl
 
 \subsubsection{Outcome variables}
 Outcome variables are used for evaluation of the consequences of implementation
-of the decisions; therefore at least one of them is used as the optimization
+of the decisions; therefore, at least one of them is used as the optimization
 objective.
 
 In the model prototype only two outcomes (both used as criteria in
 multiple-criteria model analysis) are defined:
 \btlb
 \item $cost$: the total cost of the system over the planning period, and
-\item $CO2$: the total CO2 emission caused by the system.
+\item $CO2$: the total CO2 emission caused by the production system.
 \etl
 
 \subsubsection{State variables}
 The variables defining the state of the system:
 \btlb
-\item $cap_{tp}$: production capacity. {\em Note: this may not be needed,
-	let's consider the relations defined in Section~\ref{sec:rel} and discuss.}
-\item \dots
+\item \dots (to be defined, if needed).
 \etl
 
 \subsubsection{Auxiliary variables}
 All other variables used in the SMS:
 \btlb
-\item \dots
+\item $actInp_{cp}$ input resources required by all technologies $t \in T$
+\item \dots (all remaining variables, to be defined).
 \etl
 
 \subsection{Parameters}
@@ -149,32 +168,76 @@ The following model parameters are used in the model relations
 specified in in Section~\ref{sec:rel}:
 \btlb
 \item values of indices (members of sets) specified in Section~\ref{sec:index},
-\item $\tau_t$: lifetime (number of periods) of the new capacity,
+\item $\tau$: lifetime (number of periods) of the new capacity (equal for all
+	technologies),
 \item $d_{cp}, c \in C_f$: demand for final commodities defined by $C_f \subset C$
-\item $a_{tvc}$: amount of product from the unit of the corresponding activity
+\item $a_{tvc}$: amount of output from the unit of the corresponding activity
+\item $inp_{ctv}$: amount of input required by the unit of the corresponding activity
+\item $ef_{tv}$: CO2 emission factor
+\item $invC_{tv}$: unit investment cost of new capacity
+\item $omcC_{tv}$: unit OMC of activity
+\item $extP_{cp}$: unit price of external input resources
+\item \dots (the list is incomplete)
 \etl
 
 \subsection{Relations}\label{sec:rel}
 The values of the model variables conform to the following model relations.
 \btlb
-\item The sum of activities $act_{tvp}$ shall shall result in producing the required
+\item The sum of activities $act_{tvp}$ shall result in producing the required
 	amounts of the final commodities:
 	\be
-	\sum_{t \in T_f} \sum_{v \in V_{tp}} a_{tvc} \cdot act_{tvp} \ge d_{cp} \quad
+	\sum_{t \in T_f} \sum_{v \in V_p} a_{tvc} \cdot act_{tvp} \ge d_{cp} \quad
 		c \in C_f, p \in P.
 	\ee
-	where $V_{tp} \subset V$ is defined by:
-	\be
-		V_{tp} = \{p - tau_t, p - tau_t + 1, \dots, p\}
+	where $V_p \subset V$ is defined by:
+	\be \label{eq:vp}
+		V_p = \{p - \tau + 1, p - \tau + 2, \dots, p\}.
 	\ee
-\item The levels of activities cannot exceed the corresponding capacities:
+	The parameter $\tau > 1$ defines the number of following periods during which the
+	capacity installed in $v$-th period remains available for the corresponding
+	activity. In the prototype implementation, the value of~$\tau$ is equal
+	for all technologies.\footnote{
+	Note that for $\tau = 4$ (the capacity life-time of 20 years) the
+	$V_p$ defined by~\eqref{eq:vp} is equal to
+	$V_p = \{p - 3, p - 2, p - 1, p\}$.}
+\item The levels of activities cannot exceed the corresponding available
+	capacities:
 	\be
-		act_{tvp} \le ncap_{tvp}, \quad t \in T, v \in V_p, p \in P.
+		act_{tvp} \le cap_{tv}, \quad t \in T, v \in V_p, p \in P.
 	\ee
-	Note: The values new capacities $ncap_{tvp}$ within the planning period
+	Note: The values new capacities $cap_{tv}$ within the planning period
 	($v \in P$) are defined by the decision variables.
-	However, for the non-positive values of $V_{tp}$ (i.e., historical investments)
-	are defined by the model parameters.
+	However, for the non-positive values of $V_{p}$ (i.e., historical investments)
+	the $cap_{tv}$ values are defined by the model parameters.
+\item Each activity requires the corresponding input resources.
+	The following relation defines the inputs of the corresponding commodities
+	required as inputs by all technologies:
+	\be
+		actInp_{cp} = \sum_{t \in T} \sum_{v \in V_p} inp_{ctv} \cdot act_{tvp},
+		\quad  c \in C_i,\; p \in P
+	\ee
+\item Note: relations describing the up-stream technologies need to be added here
+\item The total CO2 emission caused by the activities is defined by:
+	\be
+		CO2 = \sum_{p \in P} \sum_{t \in T} \sum_{v \in V_p} ef_{tv} \cdot act_{tvp}
+	\ee
+	Note: emissions from up-stream activities shall be added after these will be defined.
+\item Investment costs are defined by:
+	\be
+		invCost = \sum_{t \in T} \sum_{v \in P} invC_{tv} \cdot cap_{tv}
+	\ee
+\item Operations and maintenance costs are defined by:
+	\be
+		omc = \sum_{t \in T} \sum_{p \in P} \sum_{v \in V_p} omcC_{tv} \cdot act_{tvp}
+	\ee
+\item Costs of externally provided inputs are defined by:
+	\be
+		extCost = \sum_{c \in C_i} \sum_{p \in P} extP_{cp} \cdot actInp_{cp}
+	\ee
+\item Total cost is defined by:
+	\be
+		cost = invCost + omc + extCost
+	\ee
 \etl
 
 
