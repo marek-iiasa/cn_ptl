@@ -177,6 +177,7 @@ specified in in Section~\ref{sec:rel}:
 \item $invC_{tv}$: unit investment cost of new capacity
 \item $omcC_{tv}$: unit OMC of activity
 \item $extP_{cp}$: unit price of external input resources
+\item $utlF_{t}$: capacity utilization factor
 \item \dots (the list is incomplete)
 \etl
 
@@ -203,7 +204,7 @@ The values of the model variables conform to the following model relations.
 \item The levels of activities cannot exceed the corresponding available
 	capacities:
 	\be
-		act_{tvp} \le cap_{tv}, \quad t \in T, v \in V_p, p \in P.
+		act_{tvp} \le utlF_t \cdot cap_{tv}, \quad t \in T, v \in V_p, p \in P.
 	\ee
 	Note: The values new capacities $cap_{tv}$ within the planning period
 	($v \in P$) are defined by the decision variables.
