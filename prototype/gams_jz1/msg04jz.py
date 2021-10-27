@@ -1,0 +1,100 @@
+"""
+This code is based on the jupyter nb by Jinyang; info on cells was removed.
+The code was modified by Marek to read data from a dedicated directory and from renamed (to use short names) files.
+Code was also modified to conform to the PEP 8 (i.e., all pycharm warnings were addressed).
+see the Readme.txt for more  info
+
+The code reports two errors (on import ixmp and message+ix) but runs despite the reported errors.
+Open issues:
+- optimization finished OK; the results needs to be checked.
+- post-processing reports two errors, both related to the gdx content
+The console output is stored in log01.txt file.
+
+NOTE: the GAMS files are located message_ix installation dependent dir. In Marek's iMac:
+/Users/marek/anaconda3/envs/msg_env/lib/python3.9/site-packages/message_ix/model/
+It would be good to ind out how to change this (default?) location.
+"""
+
+# the following two lines should not be needed in pycharm:
+#   #!/usr/bin/env python
+# # coding: utf-8
+
+# import pandas as pd  (not needed yet)
+# The following two imports result in errors ("No module named ixmp") but the code works despite the reported errors
+import pathlib
+
+import ixmp
+import message_ix
+
+# the following commented because in pycharm it gives error
+# get_ipython().run_line_magic('matplotlib', 'inline')
+
+# Loading Modeling platform
+mp = ixmp.Platform()
+#  if the DB is locked then remove ~/.local/share/ixmp/localdb/default.lck
+
+# Creating a new, empty scenario
+scenario = message_ix.Scenario(mp, model='PTL baseline', scenario='baseline_xlsx', version='new')
+
+horizon = range(2020, 2051, 5)
+scenario.add_horizon(year=list(horizon))    # the list cast added to avoid warning
+# scenario.add_horizon(year=horizon)
+node = 'Chinese'
+scenario.add_spatial_sets({'country': node})
+scenario.add_set("commodity", ["coal", "oil", "hydrogen", "CO2", "biomass", "gasoline", "diesel", "liquid"])
+scenario.add_par("interestrate", horizon, value=0.06, unit='-')
+scenario.add_set("level", ["primary", "secondary", "final", "useful"])
+scenario.add_set('emission','CO2')
+scenario.add_set('emission','GHG','CO2')
+data_dir = 'C:/Users/zaoji/PTL - pycharm/'   # directory the data files
+# data_dir = '../data/'   # directory the data files
+scenario.read_excel(pathlib.Path(data_dir + 'demand(1).xlsx'), add_units=True, commit_steps=False)
+# scenario.read_excel(data_dir + 'demand.xlsx', add_units=True, commit_steps=False)
+print(scenario.idx_names('demand'))
+
+scenario.add_set("technology", ['oil_exc', 'oil_import', 'coal_exc', 'renewable_hydrogen', 'CO2_capture',
+                 'biomass_exc', 'OTL', 'CTL', 'PTL', 'BTL', 'Transportation'])
+scenario.read_excel(pathlib.Path(data_dir + 'basic.xlsx'), add_units=True, commit_steps=False)
+scenario.read_excel(pathlib.Path(data_dir + 'emission.xlsx'), add_units=True, commit_steps=False)
+scenario.set('technology')
+scenario.par('capacity_factor')
+scenario.read_excel(pathlib.Path(data_dir + 'constraint.xlsx'), add_units=True, commit_steps=False)
+scenario.read_excel(pathlib.Path(data_dir + 'historic.xlsx'), add_units=True, commit_steps=False)
+
+mp.add_unit('CNY/t')
+scenario.read_excel(pathlib.Path(data_dir + 'economic.xlsx'), add_units=True, commit_steps=False)
+
+scenario.set_as_default()
+scenario.solve()
+
+# The following 3 cmds results in errors (probably because these scenarios are unknown on imac
+# Objective value of the original 'baseline' scenario.
+# base = message_ix.Scenario(mp, model='PTL model attempt', scenario='baseline')
+# base.var('OBJ')['lvl']
+# scenario.var('OBJ')['lvl']
+
+mp.close_db()
+
+import pandas as pd
+
+mp = ixmp.Platform()
+
+model = 'PTL baseline'
+
+base = message_ix.Scenario(mp, model='PTL baseline', scenario='baseline_xlsx')
+scen = base.clone(model, 'emission_bound','introducing an upper bound on emissions',
+                  keep_solution=False)
+scen.check_out()
+year_df = scen.vintage_and_active_years()
+vintage_years, act_years = year_df['year_vtg'], year_df['year_act']
+model_horizon = scen.set('year')
+country = 'Chinese'
+scen.add_set('emission', 'CO2')
+scen.add_cat('emission', 'GHG', 'CO2')
+scen.add_par('bound_emission', [country, 'GHG', 'all', 'cumulative'],
+             value=58042357.14, unit='tCO2')#2303112663 initial value
+scen.commit(comment='introducing emissions and setting an upper bound')
+scen.set_as_default()
+scen.solve()
+scen.var('OBJ')['lvl']
+mp.close_db()
