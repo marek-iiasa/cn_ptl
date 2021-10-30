@@ -1,4 +1,7 @@
 """
+This code is based on msg02jz.py; A new section to added CO2 emission constraints is from line 80-103.
+“”“
+previous information
 This code is based on the jupyter nb by Jinyang; info on cells was removed.
 The code was modified by Marek to read data from a dedicated directory and from renamed (to use short names) files.
 Code was also modified to conform to the PEP 8 (i.e., all pycharm warnings were addressed).
@@ -37,7 +40,8 @@ mp = ixmp.Platform()
 scenario = message_ix.Scenario(mp, model='PTL baseline', scenario='baseline_xlsx', version='new')
 
 horizon = range(2020, 2051, 5)
-scenario.add_horizon(year=list(horizon))    # the list cast added to avoid warning
+scenario.add_horizon(year=list(horizon))
+# the list cast added to avoid warning
 # scenario.add_horizon(year=horizon)
 node = 'Chinese'
 scenario.add_spatial_sets({'country': node})
@@ -92,7 +96,8 @@ country = 'Chinese'
 scen.add_set('emission', 'CO2')
 scen.add_cat('emission', 'GHG', 'CO2')
 scen.add_par('bound_emission', [country, 'GHG', 'all', 'cumulative'],
-             value=58042357.14, unit='tCO2')#2303112663 initial value
+             value=141025714.29, unit='tCO2')
+# 2303112663 this value is corresponding to the baseline scenario's CO2 emission
 scen.commit(comment='introducing emissions and setting an upper bound')
 scen.set_as_default()
 scen.solve()
