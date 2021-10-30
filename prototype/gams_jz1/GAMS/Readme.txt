@@ -1,0 +1,1 @@
+The old version of model_core , the CO2 is double counted for it sum China with the world, to fix this problem, this new model_core. gms divided the sum of emission by 2 to numerical solve this problem.
