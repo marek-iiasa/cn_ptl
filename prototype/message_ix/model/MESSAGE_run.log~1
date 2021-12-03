@@ -1,0 +1,106 @@
+--- Job MESSAGE_run.gms Start 08/09/21 18:03:55 31.2.0 r8ba6aed WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    D:\GAMS\31.2\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\MESSAGE_run.gms
+    ScrDir D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\225a\
+    SysDir D:\GAMS\31.2\
+    LogOption 4
+    --in D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\data\MsgData_Austrian_energy_model_baseline.gdx
+    --out D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\output\MsgOutput_Austrian_energy_model_baseline.gdx
+    --iter D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\output\MsgIterationReport_Austrian_energy_model_baseline.gdx
+GAMS 31.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+*** License file too old for this version of GAMS.
+*** Maintenance expired 13 days ago.
+Licensee: Medium MUD - 10 User License                   E190424:0859AO-WIN
+          East China University of Science and Technology, School ofDC14915
+          D:\GAMS\31.2\gamslice.txt
+--- Starting compilation
+--- MESSAGE_run.gms(65) 2 Mb
+--- . MESSAGE/model_setup.gms(66) 2 Mb
+--- .. MESSAGE/auxiliary_settings.gms(37) 2 Mb
+--- . MESSAGE/model_setup.gms(69) 2 Mb
+--- .. version.gms(23) 2 Mb
+--- . MESSAGE/model_setup.gms(70) 2 Mb
+--- .. MESSAGE/version_check.gms(7) 2 Mb
+--- GDXin=D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\data\MsgData_Austrian_energy_model_baseline.gdx
+--- .. MESSAGE/version_check.gms(24) 3 Mb
+--- . MESSAGE/model_setup.gms(73) 3 Mb
+--- .. MESSAGE/sets_maps_def.gms(483) 3 Mb
+--- . MESSAGE/model_setup.gms(74) 3 Mb
+--- .. MESSAGE/parameter_def.gms(853) 3 Mb
+--- . MESSAGE/model_setup.gms(77) 3 Mb
+--- .. MESSAGE/data_load.gms(9) 3 Mb
+--- GDXin=D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\data\MsgData_Austrian_energy_model_baseline.gdx
+--- .. MESSAGE/data_load.gms(104) 3 Mb
+--- ... includes/period_parameter_assignment.gms(118) 3 Mb
+--- .. MESSAGE/data_load.gms(240) 3 Mb
+--- . MESSAGE/model_setup.gms(80) 3 Mb
+--- .. MESSAGE/scaling_investment_costs.gms(180) 3 Mb
+--- . MESSAGE/model_setup.gms(86) 3 Mb
+--- .. MESSAGE/model_core.gms(2246) 3 Mb
+--- . MESSAGE/model_setup.gms(86) 3 Mb
+--- MESSAGE_run.gms(71) 3 Mb
+--- . MESSAGE/model_solve.gms(104) 3 Mb
+--- .. includes/aux_computation_time.gms(14) 3 Mb
+--- . MESSAGE/model_solve.gms(170) 3 Mb
+--- MESSAGE_run.gms(78) 3 Mb
+--- . MESSAGE/reporting.gms(26) 3 Mb
+--- MESSAGE_run.gms(87) 3 Mb
+--- Starting execution: elapsed 0:00:00.100
+--- MESSAGE_run.gms(1568) 4 Mb
+    +++ Importing data from 'D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\data\MsgData_Austrian_energy_model_baseline.gdx'... +++
+--- MESSAGE_run.gms(1586) 4 Mb
+--- GDXin=D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\data\MsgData_Austrian_energy_model_baseline.gdx
+--- MESSAGE_run.gms(4370) 4 Mb
+    +++ Solve the perfect-foresight version of MESSAGEix +++
+--- Generating LP model MESSAGE_LP
+--- MESSAGE_run.gms(4388) 4 Mb
+---   272 rows  203 columns  816 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.140
+
+IBM ILOG CPLEX   31.2.0 r8ba6aed Released Jun 19, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading parameter(s) from "D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\cplex.opt"
+>>  advind = 0
+>>  lpmethod = 2
+>>  threads = 4
+>>  epopt = 1e-06
+Finished reading from "D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\cplex.opt"
+Reading data...
+Starting Cplex...
+Space for names approximately 0.02 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_LPMethod                                2
+CPXPARAM_Threads                                 4
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               100000000
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_Tune_TimeLimit                          200000
+Tried aggregator 1 time.
+LP Presolve eliminated 145 rows and 77 columns.
+Aggregator did 29 substitutions.
+Reduced LP has 98 rows, 97 columns, and 300 nonzeros.
+Presolve time = 0.00 sec. (0.27 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =        107192.692334
+LP status(1): optimal
+Cplex Time: 0.02sec (det. 0.62 ticks)
+
+Optimal solution found.
+Objective :      206321.900824
+
+--- Restarting execution
+--- MESSAGE_run.gms(4388) 2 Mb
+--- Reading solution for model MESSAGE_LP
+--- MESSAGE_run.gms(4581) 3 Mb
+--- GDX File D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\output\MsgOutput_Austrian_energy_model_baseline.gdx
+--- MESSAGE_run.gms(4583) 3 Mb
+    +++ End of MESSAGEix (stand-alone) run - have a nice day! +++
+*** Status: Normal completion
+--- Job MESSAGE_run.gms Stop 08/09/21 18:03:55 elapsed 0:00:00.411

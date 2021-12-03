@@ -1,0 +1,114 @@
+--- Job MESSAGE_run.gms Start 07/22/21 14:35:28 31.2.0 r8ba6aed WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    D:\GAMS\31.2\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\MESSAGE_run.gms
+    ScrDir D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\225a\
+    SysDir D:\GAMS\31.2\
+    LogOption 4
+    --in D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\data\MsgData_PTL_model_attempt_emission_bound.gdx
+    --out D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\output\MsgOutput_PTL_model_attempt_emission_bound.gdx
+    --iter D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\output\MsgIterationReport_PTL_model_attempt_emission_bound.gdx
+GAMS 31.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+*** License file too old for this version of GAMS.
+*** Maintenance expired 13 days ago.
+Licensee: Medium MUD - 10 User License                   E190424:0859AO-WIN
+          East China University of Science and Technology, School ofDC14915
+          D:\GAMS\31.2\gamslice.txt
+--- Starting compilation
+--- MESSAGE_run.gms(65) 2 Mb
+--- . MESSAGE/model_setup.gms(66) 2 Mb
+--- .. MESSAGE/auxiliary_settings.gms(37) 2 Mb
+--- . MESSAGE/model_setup.gms(69) 2 Mb
+--- .. version.gms(23) 2 Mb
+--- . MESSAGE/model_setup.gms(70) 2 Mb
+--- .. MESSAGE/version_check.gms(7) 2 Mb
+--- GDXin=D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\data\MsgData_PTL_model_attempt_emission_bound.gdx
+--- .. MESSAGE/version_check.gms(24) 3 Mb
+--- . MESSAGE/model_setup.gms(73) 3 Mb
+--- .. MESSAGE/sets_maps_def.gms(483) 3 Mb
+--- . MESSAGE/model_setup.gms(74) 3 Mb
+--- .. MESSAGE/parameter_def.gms(853) 3 Mb
+--- . MESSAGE/model_setup.gms(77) 3 Mb
+--- .. MESSAGE/data_load.gms(9) 3 Mb
+--- GDXin=D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\data\MsgData_PTL_model_attempt_emission_bound.gdx
+--- .. MESSAGE/data_load.gms(104) 3 Mb
+--- ... includes/period_parameter_assignment.gms(118) 3 Mb
+--- .. MESSAGE/data_load.gms(240) 3 Mb
+--- . MESSAGE/model_setup.gms(80) 3 Mb
+--- .. MESSAGE/scaling_investment_costs.gms(180) 3 Mb
+--- . MESSAGE/model_setup.gms(86) 3 Mb
+--- .. MESSAGE/model_core.gms(2246) 3 Mb
+--- . MESSAGE/model_setup.gms(86) 3 Mb
+--- MESSAGE_run.gms(71) 3 Mb
+--- . MESSAGE/model_solve.gms(104) 3 Mb
+--- .. includes/aux_computation_time.gms(14) 3 Mb
+--- . MESSAGE/model_solve.gms(170) 3 Mb
+--- MESSAGE_run.gms(78) 3 Mb
+--- . MESSAGE/reporting.gms(26) 3 Mb
+--- MESSAGE_run.gms(87) 3 Mb
+--- Starting execution: elapsed 0:00:00.073
+--- MESSAGE_run.gms(1568) 4 Mb
+    +++ Importing data from 'D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\data\MsgData_PTL_model_attempt_emission_bound.gdx'... +++
+--- MESSAGE_run.gms(1586) 4 Mb
+--- GDXin=D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\data\MsgData_PTL_model_attempt_emission_bound.gdx
+--- MESSAGE_run.gms(4370) 4 Mb
+    +++ Solve the perfect-foresight version of MESSAGEix +++
+--- Generating LP model MESSAGE_LP
+--- MESSAGE_run.gms(4388) 5 Mb
+---   717 rows  590 columns  2,703 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.114
+
+IBM ILOG CPLEX   31.2.0 r8ba6aed Released Jun 19, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading parameter(s) from "D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\cplex.opt"
+>>  advind = 0
+>>  lpmethod = 2
+>>  threads = 4
+>>  epopt = 1e-06
+Finished reading from "D:\Anaconda\envs\message_env\lib\site-packages\message_ix\model\cplex.opt"
+Reading data...
+Starting Cplex...
+Space for names approximately 0.07 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_LPMethod                                2
+CPXPARAM_Threads                                 4
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               100000000
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_Tune_TimeLimit                          200000
+Implied bounds make row 'EMISSION_CONSTRAINT(Chinese.GHG.all.cumulative)' infeasible.
+Presolve time = 0.02 sec. (0.34 ticks)
+LP status(3): infeasible
+Cplex Time: 0.02sec (det. 0.34 ticks)
+Rerunning with presolve turned off and solving with LPMETHOD=1
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Preprocessing_Presolve                  0
+CPXPARAM_LPMethod                                1
+CPXPARAM_Threads                                 4
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               100000000
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_Tune_TimeLimit                          200000
+
+Iteration log . . .
+Iteration:     1    Scaled infeas =    2853584997.911600
+Iteration:   102    Scaled infeas =    2379083331.942025
+Removing shift (1).
+LP status(3): infeasible
+Cplex Time: 0.02sec (det. 1.43 ticks)
+
+Model has been proven infeasible.
+--- Restarting execution
+--- MESSAGE_run.gms(4388) 2 Mb
+--- Reading solution for model MESSAGE_LP
+--- MESSAGE_run.gms(4370) 3 Mb
+    +++ MESSAGEix did not solve to optimality - run is aborted, no output produced! +++
+--- MESSAGE_run.gms(4370) 3 Mb 1 Error
+*** Status: Execution error(s)
+--- Job MESSAGE_run.gms Stop 07/22/21 14:35:29 elapsed 0:00:00.345
