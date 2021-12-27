@@ -13,19 +13,19 @@ $If set mcma $GOTO post_solve
 
 Model MC_lp / all / ;
 
-*$ontext       
+$ontext       
         put_utility 'log' /'+++ Minimize CO2_CUM variable. +++ ' ;
         Solve MC_lp using LP minimizing CO2_CUM ;
         Display CO2_CUM.l ;
         Display COST_CUM.l ;
-*$offtext
+$offtext
 
-$ontext
+*$ontext
         put_utility 'log' /'+++ Minimize COST_CUM variable. +++ ' ;
         Solve MC_lp using LP minimizing COST_CUM ;
         Display CO2_CUM.l ;
         Display COST_CUM.l ;
-$offtext        
+*$offtext        
 
 
        

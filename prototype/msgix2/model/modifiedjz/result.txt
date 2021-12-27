@@ -1,9 +1,0 @@
-run with out writting master.gms in new clean version of MESSAGE
-
-optimizating cost
-with data unsaclled                                  91348514566912.078125
-with data scalled by million                        91348514.566912
-
-run after writting maser.gms
-cost min                                                  91348514.566912
-emission min                                           233379245.357143
