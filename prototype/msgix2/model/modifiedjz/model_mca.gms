@@ -25,7 +25,8 @@ Equations
 * scales on;u COST_CUM to have the cost values of the same order of
 * of magnitude as the CO2_CUM values
 Parameter
-	scal_cost	 / 1.e-6 / ;
+	scal_cost  / 1.e-6 / 
+	scal_emm   /0.5/ ;
 *
 * Definitions of the outcome variables
 * NOTE: the definitions use parameters and variables of the core model
@@ -34,5 +35,5 @@ COST_CUM_DEF..
 		SUM( (node,year), df_period(year) * COST_NODAL(node,year) ) ;
 CO2_CUM_DEF..
 	CO2_CUM =E= SUM( (node,emission,type_tec,year),
-		EMISS(node,emission,type_tec,year) ) ;
+		EMISS(node,emission,type_tec,year) )*scal_emm ;
 

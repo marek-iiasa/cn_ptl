@@ -1,0 +1,10 @@
+In this file should values of criteria (max 5 digits) should be stored.
+Each row shall contain the run id (same as the corresponding gdx root-name,
+and values of two objectives:
+
+id         COST_CUM    CO2_CUM
+cost_jz1  91.348515    1748.452076
+co2_jz1  112.954216    116.689623
+cost_mm1   xxxxx       xxxxx
+co2_mm1    xxxxx       xxxxx
+
