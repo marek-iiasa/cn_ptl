@@ -3,8 +3,8 @@ Each row shall contain the run id (same as the corresponding gdx root-name,
 and values of two objectives:
 
 id         COST_CUM    CO2_CUM
-cost_jz1  91.348515    1748.452076
-co2_jz1  112.954216    116.689623
-cost_mm1   xxxxx       xxxxx
-co2_mm1    xxxxx       xxxxx
+cost_jz1   91.348515    1748.452076
+cost_mm1   91.3485      1748.45
+co2_jz1   112.954216    116.689623
+co2_mm1   112.954       116.69
 

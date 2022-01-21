@@ -21,18 +21,12 @@ Equations
 	CO2_CUM_DEF		definition of total CO2 emission
 	COST_CUM_DEF	definition of the total cost
 	;
-
-$ontext
-Additional/ad-hoc scaling parameter (assumes scaled parameters).
-It scales only COST_CUM to have the cost values of the same order of
-of magnitude as the CO2_CUM values
-CO2 is scaled by 0.5 to correct the double-counted (world and cn) emissions
-$offtext
+* Ad-hoc scaling parameter (assumes scaled parameters; therefore it
+* scales on;u COST_CUM to have the cost values of the same order of
+^ of magnitude as the CO2_CUM values
 Parameter
-	scal_cost  / 1.e-6 / 
-	scal_emm   /0.5/
-	;
-
+	scal_cost	'scaling costs (from RMB to mln of RMB)'  / 1.e-6 / ;
+*
 * Definitions of the outcome variables
 * NOTE: the definitions use parameters and variables of the core model
 COST_CUM_DEF..
@@ -40,5 +34,5 @@ COST_CUM_DEF..
 		SUM( (node,year), df_period(year) * COST_NODAL(node,year) ) ;
 CO2_CUM_DEF..
 	CO2_CUM =E= SUM( (node,emission,type_tec,year),
-		EMISS(node,emission,type_tec,year) )*scal_emm ;
+		EMISS(node,emission,type_tec,year) ) ;
 
