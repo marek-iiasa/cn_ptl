@@ -1,0 +1,10 @@
+# rm -f run.log
+# gams master.gms -ll=2 -lo=2 --in=data/ptl.gdx > run.log
+# less run.log
+# gams master.gms -ll=2 -lo=2 --in=data/ptl2.gdx
+
+# to test the mcma flow uncomment the below
+# gams master.gms -ll=2 -lo=2 --mcma=xx
+
+# test the selfish optimizations
+gams master.gms -ll=2 -lo=2

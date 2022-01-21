@@ -1,0 +1,4 @@
+rm -f x.zip
+zip -r x . -x run runzip .DS_Store .\*.swp *.txt
+
+# to list the zip archive: unzip -v x
