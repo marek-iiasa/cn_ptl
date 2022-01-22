@@ -1,0 +1,6 @@
+#!/bin/csh -f
+foreach i ( `cat itr_lst` )
+# echo $i
+cp -p f/$i/*/output/*.gdx $i.gdx
+chmod -x $i.gdx
+end
