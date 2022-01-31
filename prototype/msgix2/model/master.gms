@@ -1,6 +1,9 @@
 $EOLCOM #
 
-$setglobal in data/params.gdx
+* uncomment only one of the following lines, for use scaled (params.gdx)
+* or not-scaled data, respectively.
+*  $setglobal in data/params.gdx
+$setglobal in data/params_nsc.gdx
 ;
 
 $INCLUDE MESSAGE/model_setup.gms
@@ -14,19 +17,19 @@ $If set mcma $GOTO post_solve
 
 Model MC_lp / all / ;
 
-*   $ontext       
+$ontext       
 put_utility 'log' /'+++ Minimize CO2_CUM variable. +++ ' ;
 Solve MC_lp using LP minimizing CO2_CUM ;
 Display CO2_CUM.l ;
 Display COST_CUM.l ;
-*   $offtext
+$offtext
 
-$ontext
+*   $ontext
 put_utility 'log' /'+++ Minimize COST_CUM variable. +++ ' ;
 Solve MC_lp using LP minimizing COST_CUM ;
 Display CO2_CUM.l ;
 Display COST_CUM.l ;
-$offtext        
+*   $offtext        
        
 put_utility 'log' /'+++ After the Solve +++ ' ;
        
