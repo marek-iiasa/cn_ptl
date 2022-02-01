@@ -7,29 +7,29 @@
 * 4     Barrier
 * 5     Sifting
 * 6     Concurrent
-lpmethod = 0
+lpmethod = 4
 
-* threads = 4
+threads = 4
 
-* scaling [-1 no scaling, 0 standard, 1 aggresive], default 0
-scaind 1
+* scaling [-1 no scaling, 0 standard, 1 aggressive], default 0
+scaind 0
 
 * for cplex12, not cplex9 (oder)
 * solutiontype {0 = 1, 2} default 0 (basic solution), 2 - primal-dual pair
 * solutiontype 2
 
-* crossover for cplex9
-* BarCrossAlg {-1: no, 0: automatic, 1: primal, 2: dual} default 0
-* BarCrossAlg -1
-
 * optimality tol [1e-9, 0.1], default 1e-6
-epopt 1e-8
+epopt 1e-7
 
 * feasibility tol [1e-9, 0.1], default 1e-6
-eprhs 1e-9
+eprhs 1e-7
 
 * Markowitz pivot tol [1e-4, 0.99999], default 0.01 (try 0.9, then decrease)
 * epmrk 0.9
 
 * perturbation const [> 1e-8], default 1e-6 (reduce until only one perturb.)
 * epper 1e-5
+
+* crossover for cplex9
+* BarCrossAlg {-1: no, 0: automatic, 1: primal, 2: dual} default 0
+* BarCrossAlg -1
